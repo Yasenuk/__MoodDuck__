@@ -1,0 +1,49 @@
+.popup {
+	position: fixed;
+	inset: 0;
+	padding: toRem(30) toRem(10);
+	pointer-events: none;
+	transition: transform 0.3s, scale 0.3s ease 0s;
+	transform: translateY(200%);
+	scale: 0;
+	z-index: 150;
+
+	&._open {
+		overflow: auto;
+		pointer-events: auto;
+		transition: transform 0.3s, scale 0.3s ease 0s;
+		transform: translateY(0);
+		scale: 1;
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		min-height: 100%;
+		width: 100%;
+		flex: 1 1 auto;
+	}
+
+	&__body {
+		background-color: #fafafa;
+		width: 100%;
+		max-width: toRem(900);
+	}
+
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__close {
+	}
+
+	&__content {
+	}
+
+	&__footer {
+	}
+}

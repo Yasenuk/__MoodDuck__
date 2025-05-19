@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="./src/styles/css/styles.css" />
+		<title>MoodDuck Lab</title>
+	</head>
+	<body>
+		<section class="wrapper">
+			<header class="header">
+				<section class="header__container">
+					<a href="./index.html" class="header__logo"><img src="./src/images/logo.svg" alt="Логотип MoodDuck"></a>
+					<nav class="header__menu menu" data-burger>
+						<button class="menu__close-button"><span></span></button>
+						<section class="menu__body">
+							<ul class="menu__list menu__list_links">
+								<li class="menu__item menu__item_links">
+									<a href="" class="menu__link">Головна</a>
+								</li>
+								<li class="menu__item menu__item_links">
+									<a href="" class="menu__link">Галерея смаків</a>
+								</li>
+								<li class="menu__item menu__item_links">
+									<a href="" class="menu__link">Галерея мерчу</a>
+								</li>
+								<li class="menu__item menu__item_links">
+									<a href="" class="menu__link">Про нас</a>
+								</li>
+								<li class="menu__item menu__item_links">
+									<a href="" class="menu__link">Бібліотека матеріалів</a>
+								</li>
+								<li class="menu__item menu__item_links">
+									<a href="" class="menu__link">Відгуки</a>
+								</li>
+								<li class="menu__item menu__item_links">
+									<a href="" class="menu__link">Контакти</a>
+								</li>
+							</ul>
+							<section class="menu__section" data-vis>
+								<h3 class="menu__title">Для прямого зв’язку:</h3>
+								<ul class="menu__contacts menu__list">
+									<li class="menu__item">
+										<a href="" class="menu__link">
+											<i class="icon-mail menu__item_ico"></i><span>Acenuk555@gmail.com</span>
+										</a>
+									</li>
+									<li class="menu__item">
+										<a href="https://www.instagram.com/moodduck_liquid?igsh=MTZ0aW5ldjVqcnNnZw==" class="menu__link">
+											<i class="icon-Instagram menu__item_ico"></i><span>Перейти до чату</span>
+										</a>
+									</li>
+								</ul>
+							</section>
+							<section class="menu__section">
+								<h3 class="menu__title" data-vis>Соціальні мережі:</h3>
+								<ul class="menu__social menu__list">
+									<li class="menu__item menu__item_social">
+										<a href="https://t.me/moodducklab" class="menu__link">
+											<i class="icon-telegram menu__item_ico"></i><span data-vis>Telegram-канал</span>
+										</a></li>
+									<li class="menu__item menu__item_social">
+										<a href="" class="menu__link">
+											<i class="icon-Instagram menu__item_ico"></i><span data-vis>Instagram</span>
+										</a>
+									</li>
+									<li class="menu__item menu__item_social">
+										<a href="https://vm.tiktok.com/ZMSJ863H1/" class="menu__link">
+											<i class="icon-tiktok menu__item_ico"></i><span data-vis>TikTok</span>
+										</a>
+									</li>
+								</ul>
+							</section>
+						</section>
+					</nav>
+				</section>
+			</header>
+			<main class="main">
+				<section class="main__hero hero">
+					<section class="main__bg">
+						<img class="main__bg_noise" src="./src/images/alternative/noise.png" alt="Шум">
+						<img class="main__bg_light main__hero_light" src="./src/images/alternative/light.png" alt="Світло на фоні">
+						<img class="main__bg_graffiti" src="./src/images/alternative/solid/graffiti.png" alt="Фон графіті">
+					</section>
+					<section class="hero__container">
+						<section class="hero__slider swiper swiper-banner">
+							<section class="hero__wrapper swiper-wrapper">
+								<section class="hero__slide swiper-slide">
+									<img src="./src/images/banners/banner.png" alt="Банер">
+								</section>
+								<section class="hero__slide swiper-slide">
+									<img src="./src/images/banners/banner.png" alt="Банер">
+								</section>
+								<section class="hero__slide swiper-slide">
+									<img src="./src/images/banners/banner.png" alt="Банер">
+								</section>
+							</section>
+							<section class="hero__conrtol swiper-conrtol">
+								<section class="hero__pagination swiper-pagination"></section>
+								<section class="hero__slider-buttons swiper-buttons">
+									<button type="button" class="hero__slider-button hero__slider-button_prev swiper-button-prev">
+										<i class="icon-arrow"></i>
+									</button>
+									<button type="button" class="hero__slider-button hero__slider-button_next swiper-button-next">
+										<i class="icon-arrow"></i>
+									</button>
+								</section>
+							</section>
+						</section>
+					</section>
+				</section>
+				<section class="main__gallery-flavous gallery-flavours">
+					<section class="main__bg">
+						<img class="main__bg_noise" src="./src/images/alternative/noise.png" alt="Шум">
+						<img class="main__bg_light main__gallery-flavours_light" src="./src/images/alternative/light.png" alt="Світло на фоні">
+						<img class="main__bg_graffiti" src="./src/images/alternative/solid/graffiti.png" alt="Фон графіті">
+					</section>
+					<section class="gallery-flavours__container">
+						<section class="heading">
+							<h2 class="heading__title">Галерея <span class="heading__title_light">смаків</span></h2>
+							<p class="heading__subtitle">
+								<span class="heading__subtitle_accent">21</span>
+								<span class="heading__subtitle_text">Вибуховий смак — від класики до екзотики. Максимум якості —мінімум компромісів!</span>
+							</p>
+						</section>
+						<section class="gallery-flavours__slider swiper swiper-card">
+							<section class="gallery-flavours__wrapper swiper-wrapper">
+
+								<section class="gallery-flavours__slide swiper-slide">
+
+									<section class="gallery-flavours__card product-card">
+
+										<section class="product-card__picture">
+											<img src="./src/images/cards/flavours" alt="Ароматизатор 12мл " class="product-card__image">
+
+											<p class="product-card__picture_info">Яскравий, освіжаючий смак стиглого зеленого яблука з приємною кислинкою. Відкривається відразу — соковите, виразне, з легким холодком у післясмаку. Чистий, лаконічний і дуже смачний варіант для щоденного паріння.</p>
+
+											<button class="product-card__picture_button product-card__picture_button-info">
+												<i class="icon-info"></i>
+											</button>
+
+											<button class="product-card__picture_button product-card__picture_button-close">
+												<i class="icon-cross"></i>
+											</button>
+										</section>
+
+										<section class="product-card__content">
+											<h3 class="product-card__name"></h3>
+											<p class="product-card__strength">Міцність: 50 mg / Strong</p>
+											<p class="product-card__volume">Об'єм: 10 ml / 30 ml</p>
+										</section>
+
+									</section>
+
+								</section>
+
+								<section class="gallery-flavours__slide swiper-slide">
+
+									<section class="gallery-flavours__card product-card">
+
+										<section class="product-card__picture">
+											<img src="./src/images/cards/flavours" alt="Ароматизатор 12мл " class="product-card__image">
+
+											<p class="product-card__picture_info"></p>
+
+											<button class="product-card__picture_button product-card__picture_button-info">
+												<i class="icon-info"></i>
+											</button>
+
+											<button class="product-card__picture_button product-card__picture_button-close">
+												<i class="icon-cross"></i>
+											</button>
+										</section>
+
+										<section class="product-card__content">
+											<h3 class="product-card__name"></h3>
+											<p class="product-card__strength">Міцність: 50 mg / Strong</p>
+											<p class="product-card__volume">Об'єм: 10 ml / 30 ml</p>
+										</section>
+
+									</section>
+
+								</section>
+
+								<section class="gallery-flavours__slide swiper-slide">
+
+									<section class="gallery-flavours__card product-card">
+
+										<section class="product-card__picture">
+											<img src="./src/images/cards/flavours" alt="Ароматизатор 12мл " class="product-card__image">
+
+											<p class="product-card__picture_info"></p>
+
+											<button class="product-card__picture_button product-card__picture_button-info">
+												<i class="icon-info"></i>
+											</button>
+
+											<button class="product-card__picture_button product-card__picture_button-close">
+												<i class="icon-cross"></i>
+											</button>
+										</section>
+
+										<section class="product-card__content">
+											<h3 class="product-card__name"></h3>
+											<p class="product-card__strength">Міцність: 50 mg / Strong</p>
+											<p class="product-card__volume">Об'єм: 10 ml / 30 ml</p>
+										</section>
+
+									</section>
+
+								</section>
+
+								<section class="gallery-flavours__slide swiper-slide">
+
+									<section class="gallery-flavours__card product-card">
+
+										<section class="product-card__picture">
+											<img src="./src/images/cards/flavours" alt="Ароматизатор 12мл " class="product-card__image">
+
+											<p class="product-card__picture_info"></p>
+
+											<button class="product-card__picture_button product-card__picture_button-info">
+												<i class="icon-info"></i>
+											</button>
+
+											<button class="product-card__picture_button product-card__picture_button-close">
+												<i class="icon-cross"></i>
+											</button>
+										</section>
+
+										<section class="product-card__content">
+											<h3 class="product-card__name"></h3>
+											<p class="product-card__strength">Міцність: 50 mg / Strong</p>
+											<p class="product-card__volume">Об'єм: 10 ml / 30 ml</p>
+										</section>
+
+									</section>
+
+								</section>
+
+								<section class="gallery-flavours__slide swiper-slide">
+
+									<section class="gallery-flavours__card product-card">
+
+										<section class="product-card__picture">
+											<img src="./src/images/cards/flavours" alt="Ароматизатор 12мл " class="product-card__image">
+
+											<p class="product-card__picture_info"></p>
+
+											<button class="product-card__picture_button product-card__picture_button-info">
+												<i class="icon-info"></i>
+											</button>
+
+											<button class="product-card__picture_button product-card__picture_button-close">
+												<i class="icon-cross"></i>
+											</button>
+										</section>
+
+										<section class="product-card__content">
+											<h3 class="product-card__name"></h3>
+											<p class="product-card__strength">Міцність: 50 mg / Strong</p>
+											<p class="product-card__volume">Об'єм: 10 ml / 30 ml</p>
+										</section>
+
+									</section>
+
+								</section>
+
+								<section class="gallery-flavours__slide swiper-slide">
+
+									<section class="gallery-flavours__card product-card">
+
+										<section class="product-card__picture">
+											<img src="./src/images/cards/flavours" alt="Ароматизатор 12мл " class="product-card__image">
+
+											<p class="product-card__picture_info"></p>
+
+											<button class="product-card__picture_button product-card__picture_button-info">
+												<i class="icon-info"></i>
+											</button>
+
+											<button class="product-card__picture_button product-card__picture_button-close">
+												<i class="icon-cross"></i>
+											</button>
+										</section>
+
+										<section class="product-card__content">
+											<h3 class="product-card__name"></h3>
+											<p class="product-card__strength">Міцність: 50 mg / Strong</p>
+											<p class="product-card__volume">Об'єм: 10 ml / 30 ml</p>
+										</section>
+
+									</section>
+
+								</section>
+
+								<section class="gallery-flavours__slide swiper-slide">
+
+									<section class="gallery-flavours__card product-card">
+
+										<section class="product-card__picture">
+											<img src="./src/images/cards/flavours" alt="Ароматизатор 12мл " class="product-card__image">
+
+											<p class="product-card__picture_info"></p>
+
+											<button class="product-card__picture_button product-card__picture_button-info">
+												<i class="icon-info"></i>
+											</button>
+
+											<button class="product-card__picture_button product-card__picture_button-close">
+												<i class="icon-cross"></i>
+											</button>
+										</section>
+
+										<section class="product-card__content">
+											<h3 class="product-card__name"></h3>
+											<p class="product-card__strength">Міцність: 50 mg / Strong</p>
+											<p class="product-card__volume">Об'єм: 10 ml / 30 ml</p>
+										</section>
+
+									</section>
+
+								</section>
+
+								<section class="gallery-flavours__slide swiper-slide">
+
+									<section class="gallery-flavours__card product-card">
+
+										<section class="product-card__picture">
+											<img src="./src/images/cards/flavours" alt="Ароматизатор 12мл " class="product-card__image">
+
+											<p class="product-card__picture_info"></p>
+
+											<button class="product-card__picture_button product-card__picture_button-info">
+												<i class="icon-info"></i>
+											</button>
+
+											<button class="product-card__picture_button product-card__picture_button-close">
+												<i class="icon-cross"></i>
+											</button>
+										</section>
+
+										<section class="product-card__content">
+											<h3 class="product-card__name"></h3>
+											<p class="product-card__strength">Міцність: 50 mg / Strong</p>
+											<p class="product-card__volume">Об'єм: 10 ml / 30 ml</p>
+										</section>
+
+									</section>
+
+								</section>
+
+								<section class="gallery-flavours__slide swiper-slide">
+
+									<section class="gallery-flavours__card product-card">
+
+										<section class="product-card__picture">
+											<img src="./src/images/cards/flavours" alt="Ароматизатор 12мл " class="product-card__image">
+
+											<p class="product-card__picture_info"></p>
+
+											<button class="product-card__picture_button product-card__picture_button-info">
+												<i class="icon-info"></i>
+											</button>
+
+											<button class="product-card__picture_button product-card__picture_button-close">
+												<i class="icon-cross"></i>
+											</button>
+										</section>
+
+										<section class="product-card__content">
+											<h3 class="product-card__name"></h3>
+											<p class="product-card__strength">Міцність: 50 mg / Strong</p>
+											<p class="product-card__volume">Об'єм: 10 ml / 30 ml</p>
+										</section>
+
+									</section>
+
+								</section>
+
+								<section class="gallery-flavours__slide swiper-slide">
+
+									<section class="gallery-flavours__card product-card">
+
+										<section class="product-card__picture">
+											<img src="./src/images/cards/flavours" alt="Ароматизатор 12мл " class="product-card__image">
+
+											<p class="product-card__picture_info"></p>
+
+											<button class="product-card__picture_button product-card__picture_button-info">
+												<i class="icon-info"></i>
+											</button>
+
+											<button class="product-card__picture_button product-card__picture_button-close">
+												<i class="icon-cross"></i>
+											</button>
+										</section>
+
+										<section class="product-card__content">
+											<h3 class="product-card__name"></h3>
+											<p class="product-card__strength">Міцність: 50 mg / Strong</p>
+											<p class="product-card__volume">Об'єм: 10 ml / 30 ml</p>
+										</section>
+
+									</section>
+
+								</section>
+
+								<section class="gallery-flavours__slide swiper-slide">
+
+									<section class="gallery-flavours__card product-card">
+
+										<section class="product-card__picture">
+											<img src="./src/images/cards/flavours" alt="Ароматизатор 12мл " class="product-card__image">
+
+											<p class="product-card__picture_info"></p>
+
+											<button class="product-card__picture_button product-card__picture_button-info">
+												<i class="icon-info"></i>
+											</button>
+
+											<button class="product-card__picture_button product-card__picture_button-close">
+												<i class="icon-cross"></i>
+											</button>
+										</section>
+
+										<section class="product-card__content">
+											<h3 class="product-card__name"></h3>
+											<p class="product-card__strength">Міцність: 50 mg / Strong</p>
+											<p class="product-card__volume">Об'єм: 10 ml / 30 ml</p>
+										</section>
+
+									</section>
+
+								</section>
+
+								<section class="gallery-flavours__slide swiper-slide">
+
+									<section class="gallery-flavours__card product-card">
+
+										<section class="product-card__picture">
+											<img src="./src/images/cards/flavours" alt="Ароматизатор 12мл " class="product-card__image">
+
+											<p class="product-card__picture_info"></p>
+
+											<button class="product-card__picture_button product-card__picture_button-info">
+												<i class="icon-info"></i>
+											</button>
+
+											<button class="product-card__picture_button product-card__picture_button-close">
+												<i class="icon-cross"></i>
+											</button>
+										</section>
+
+										<section class="product-card__content">
+											<h3 class="product-card__name"></h3>
+											<p class="product-card__strength">Міцність: 50 mg / Strong</p>
+											<p class="product-card__volume">Об'єм: 10 ml / 30 ml</p>
+										</section>
+
+									</section>
+
+								</section>
+
+								<section class="gallery-flavours__slide swiper-slide">
+
+									<section class="gallery-flavours__card product-card">
+
+										<section class="product-card__picture">
+											<img src="./src/images/cards/flavours" alt="Ароматизатор 12мл " class="product-card__image">
+
+											<p class="product-card__picture_info"></p>
+
+											<button class="product-card__picture_button product-card__picture_button-info">
+												<i class="icon-info"></i>
+											</button>
+
+											<button class="product-card__picture_button product-card__picture_button-close">
+												<i class="icon-cross"></i>
+											</button>
+										</section>
+
+										<section class="product-card__content">
+											<h3 class="product-card__name"></h3>
+											<p class="product-card__strength">Міцність: 50 mg / Strong</p>
+											<p class="product-card__volume">Об'єм: 10 ml / 30 ml</p>
+										</section>
+
+									</section>
+
+								</section>
+
+								<section class="gallery-flavours__slide swiper-slide">
+
+									<section class="gallery-flavours__card product-card">
+
+										<section class="product-card__picture">
+											<img src="./src/images/cards/flavours" alt="Ароматизатор 12мл " class="product-card__image">
+
+											<p class="product-card__picture_info"></p>
+
+											<button class="product-card__picture_button product-card__picture_button-info">
+												<i class="icon-info"></i>
+											</button>
+
+											<button class="product-card__picture_button product-card__picture_button-close">
+												<i class="icon-cross"></i>
+											</button>
+										</section>
+
+										<section class="product-card__content">
+											<h3 class="product-card__name"></h3>
+											<p class="product-card__strength">Міцність: 50 mg / Strong</p>
+											<p class="product-card__volume">Об'єм: 10 ml / 30 ml</p>
+										</section>
+
+									</section>
+
+								</section>
+
+								<section class="gallery-flavours__slide swiper-slide">
+
+									<section class="gallery-flavours__card product-card">
+
+										<section class="product-card__picture">
+											<img src="./src/images/cards/flavours" alt="Ароматизатор 12мл " class="product-card__image">
+
+											<p class="product-card__picture_info"></p>
+
+											<button class="product-card__picture_button product-card__picture_button-info">
+												<i class="icon-info"></i>
+											</button>
+
+											<button class="product-card__picture_button product-card__picture_button-close">
+												<i class="icon-cross"></i>
+											</button>
+										</section>
+
+										<section class="product-card__content">
+											<h3 class="product-card__name"></h3>
+											<p class="product-card__strength">Міцність: 50 mg / Strong</p>
+											<p class="product-card__volume">Об'єм: 10 ml / 30 ml</p>
+										</section>
+
+									</section>
+
+								</section>
+
+								<section class="gallery-flavours__slide swiper-slide">
+
+									<section class="gallery-flavours__card product-card">
+
+										<section class="product-card__picture">
+											<img src="./src/images/cards/flavours" alt="Ароматизатор 12мл " class="product-card__image">
+
+											<p class="product-card__picture_info"></p>
+
+											<button class="product-card__picture_button product-card__picture_button-info">
+												<i class="icon-info"></i>
+											</button>
+
+											<button class="product-card__picture_button product-card__picture_button-close">
+												<i class="icon-cross"></i>
+											</button>
+										</section>
+
+										<section class="product-card__content">
+											<h3 class="product-card__name"></h3>
+											<p class="product-card__strength">Міцність: 50 mg / Strong</p>
+											<p class="product-card__volume">Об'єм: 10 ml / 30 ml</p>
+										</section>
+
+									</section>
+
+								</section>
+
+								<section class="gallery-flavours__slide swiper-slide">
+
+									<section class="gallery-flavours__card product-card">
+
+										<section class="product-card__picture">
+											<img src="./src/images/cards/flavours" alt="Ароматизатор 12мл " class="product-card__image">
+
+											<p class="product-card__picture_info"></p>
+
+											<button class="product-card__picture_button product-card__picture_button-info">
+												<i class="icon-info"></i>
+											</button>
+
+											<button class="product-card__picture_button product-card__picture_button-close">
+												<i class="icon-cross"></i>
+											</button>
+										</section>
+
+										<section class="product-card__content">
+											<h3 class="product-card__name"></h3>
+											<p class="product-card__strength">Міцність: 50 mg / Strong</p>
+											<p class="product-card__volume">Об'єм: 10 ml / 30 ml</p>
+										</section>
+
+									</section>
+
+								</section>
+
+								<section class="gallery-flavours__slide swiper-slide">
+
+									<section class="gallery-flavours__card product-card">
+
+										<section class="product-card__picture">
+											<img src="./src/images/cards/flavours" alt="Ароматизатор 12мл " class="product-card__image">
+
+											<p class="product-card__picture_info"></p>
+
+											<button class="product-card__picture_button product-card__picture_button-info">
+												<i class="icon-info"></i>
+											</button>
+
+											<button class="product-card__picture_button product-card__picture_button-close">
+												<i class="icon-cross"></i>
+											</button>
+										</section>
+
+										<section class="product-card__content">
+											<h3 class="product-card__name"></h3>
+											<p class="product-card__strength">Міцність: 50 mg / Strong</p>
+											<p class="product-card__volume">Об'єм: 10 ml / 30 ml</p>
+										</section>
+
+									</section>
+
+								</section>
+
+								<section class="gallery-flavours__slide swiper-slide">
+
+									<section class="gallery-flavours__card product-card">
+
+										<section class="product-card__picture">
+											<img src="./src/images/cards/flavours" alt="Ароматизатор 12мл " class="product-card__image">
+
+											<p class="product-card__picture_info"></p>
+
+											<button class="product-card__picture_button product-card__picture_button-info">
+												<i class="icon-info"></i>
+											</button>
+
+											<button class="product-card__picture_button product-card__picture_button-close">
+												<i class="icon-cross"></i>
+											</button>
+										</section>
+
+										<section class="product-card__content">
+											<h3 class="product-card__name"></h3>
+											<p class="product-card__strength">Міцність: 50 mg / Strong</p>
+											<p class="product-card__volume">Об'єм: 10 ml / 30 ml</p>
+										</section>
+
+									</section>
+
+								</section>
+
+								<section class="gallery-flavours__slide swiper-slide">
+
+									<section class="gallery-flavours__card product-card">
+
+										<section class="product-card__picture">
+											<img src="./src/images/cards/flavours" alt="Ароматизатор 12мл " class="product-card__image">
+
+											<p class="product-card__picture_info"></p>
+
+											<button class="product-card__picture_button product-card__picture_button-info">
+												<i class="icon-info"></i>
+											</button>
+
+											<button class="product-card__picture_button product-card__picture_button-close">
+												<i class="icon-cross"></i>
+											</button>
+										</section>
+
+										<section class="product-card__content">
+											<h3 class="product-card__name"></h3>
+											<p class="product-card__strength">Міцність: 50 mg / Strong</p>
+											<p class="product-card__volume">Об'єм: 10 ml / 30 ml</p>
+										</section>
+
+									</section>
+
+								</section>
+
+								<section class="gallery-flavours__slide swiper-slide">
+
+									<section class="gallery-flavours__card product-card">
+
+										<section class="product-card__picture">
+											<img src="./src/images/cards/flavours" alt="Ароматизатор 12мл " class="product-card__image">
+
+											<p class="product-card__picture_info"></p>
+
+											<button class="product-card__picture_button product-card__picture_button-info">
+												<i class="icon-info"></i>
+											</button>
+
+											<button class="product-card__picture_button product-card__picture_button-close">
+												<i class="icon-cross"></i>
+											</button>
+										</section>
+
+										<section class="product-card__content">
+											<h3 class="product-card__name"></h3>
+											<p class="product-card__strength">Міцність: 50 mg / Strong</p>
+											<p class="product-card__volume">Об'єм: 10 ml / 30 ml</p>
+										</section>
+
+									</section>
+
+								</section>
+
+							</section>
+							<section class="gallery-flavours__conrtol swiper-conrtol">
+								<section class="gallery-flavours__pagination swiper-pagination"></section>
+								<section class="gallery-flavours__slider-buttons swiper-buttons">
+									<button type="button" class="gallery-flavours__slider-button gallery-flavours__slider-button_prev swiper-button-prev">
+										<i class="icon-arrow"></i>
+									</button>
+									<button type="button" class="gallery-flavours__slider-button gallery-flavours__slider-button_next swiper-button-next">
+										<i class="icon-arrow"></i>
+									</button>
+								</section>
+							</section>
+						</section>
+					</section>
+				</section>
+				<section class="main__gallery-merch gallery-merch">
+					<section class="gallery-merch__container">
+						<section class="heading">
+							<h2 class="heading__title">Галерея <span class="heading__title_light">мерчу</span></h2>
+							<p class="heading__subtitle"></p>
+						</section>
+					</section>
+				</section>
+				<section class="main__about about">
+					<section class="about__container">
+						<section class="heading">
+							<h2 class="heading__title"><span class="heading__title_light"></span></h2>
+							<p class="heading__subtitle"></p>
+						</section>
+					</section>
+				</section>
+				<section class="main__brand-info brand-info">
+					<section class="brand-info__container">
+						
+					</section>
+				</section>
+				<section class="main__flavours-info flavours-info">
+					<section class="flavours-info__container">
+						
+					</section>
+				</section>
+				<section class="main__price-policy price-policy">
+					<section class="price-policy__container">
+						
+					</section>
+				</section>
+				<section class="main__resources-library resources-library">
+					<section class="resources-library__container">
+						
+					</section>
+				</section>
+				<section class="main__reviews reviews">
+					<section class="reviews__container">
+						
+					</section>
+				</section>
+				<section class="main__contacts contacts">
+					<section class="contacts__container">
+						
+					</section>
+				</section>
+			</main>
+			<footer class="footer">
+				<section class="footer__container"></section>
+			</footer>
+		</section>
+
+		<script type="module" src="./src/scripts/index.js"></script>
+	</body>
+</html>
