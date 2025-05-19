@@ -1162,6 +1162,9 @@ body._locked {
   object-position: center;
   z-index: 0;
 }
+.main__bg_noise {
+  image-rendering: pixelated;
+}
 .main__bg_noise, .main__bg_graffiti {
   width: 100%;
   height: 100%;
