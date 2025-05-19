@@ -57,14 +57,13 @@
 	&__gallery-flavours {
 		&_light {
 			display: block;
-			@include adaptiveValue(width, 2197, 1202);
-			@include adaptiveValue(height, 2191, 1198);
-			top: 50%;
-			left: -45%;
-			translate: -50% -50%;
+			@include adaptiveValue(width, 2079, 959);
+			@include adaptiveValue(height, 2073, 954);
+			top: 100%;
+			left: 0;
+			translate: -85% -70%;
 
 			@media (max-width:$tablet){
-				left: -40%;
 			}
 		}
 	}

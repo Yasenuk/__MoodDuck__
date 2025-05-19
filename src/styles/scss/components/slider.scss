@@ -127,7 +127,12 @@
 	}
 }
 
-
 .swiper-banner {
 	overflow: hidden;
+}
+
+.swiper-card {
+	@media (max-width: $mobile) {
+		overflow: hidden;
+	}
 }

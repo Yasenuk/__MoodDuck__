@@ -654,6 +654,12 @@ body._locked {
   overflow: hidden;
 }
 
+@media (max-width: 47.99875em) {
+  .swiper-card {
+    overflow: hidden;
+  }
+}
+
 .cube__side {
   left: 50%;
   top: 50%;
@@ -691,6 +697,13 @@ body._locked {
 .heading_center {
   justify-content: center;
 }
+@media (max-width: 61.99875em) {
+  .heading {
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+  }
+}
 .heading__title {
   font-family: "Bebas Neue Cyrillic";
   text-transform: uppercase;
@@ -719,7 +732,13 @@ body._locked {
 }
 .heading__title_light {
   color: var(--accent-color);
-  text-shadow: 0 0 0.5rem var(--accent-color);
+  text-shadow: 0 0 0.75rem var(--accent-color);
+}
+@media (max-width: 61.99875em) {
+  .heading__title {
+    text-align: center;
+    margin-bottom: 1.875rem;
+  }
 }
 .heading__subtitle {
   max-width: 18.125rem;
@@ -734,6 +753,12 @@ body._locked {
   font-family: "Gilroy";
   font-weight: 500;
   font-size: 1rem;
+}
+@media (max-width: 61.99875em) {
+  .heading__subtitle {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 .product-card {
@@ -807,6 +832,12 @@ body._locked {
     height: 25rem;
   }
 }
+@media (max-width: 61.99875em) {
+  .product-card {
+    width: 100%;
+    max-width: 100%;
+  }
+}
 .product-card__picture {
   width: 100%;
   height: 15.625rem;
@@ -820,8 +851,8 @@ body._locked {
   display: none;
 }
 .product-card__image {
-  max-height: 100%;
   width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: center;
 }
@@ -1197,57 +1228,52 @@ body._locked {
 }
 .main__gallery-flavours_light {
   display: block;
-  top: 50%;
-  left: -45%;
-  translate: -50% -50%;
+  top: 100%;
+  left: 0;
+  translate: -85% -70%;
 }
 @media (min-width: 82em) {
   .main__gallery-flavours_light {
-    width: 137.3125rem;
+    width: 129.9375rem;
   }
 }
 @media (min-width: 21.25em) and (max-width: 82em) {
-  @supports (width: clamp( 75.125rem , 53.3721707819rem  +  102.366255144vw , 137.3125rem )) {
+  @supports (width: clamp( 59.9375rem , 35.4519032922rem  +  115.2263374486vw , 129.9375rem )) {
     .main__gallery-flavours_light {
-      width: clamp( 75.125rem , 53.3721707819rem  +  102.366255144vw , 137.3125rem );
+      width: clamp( 59.9375rem , 35.4519032922rem  +  115.2263374486vw , 129.9375rem );
     }
   }
-  @supports not (width: clamp( 75.125rem , 53.3721707819rem  +  102.366255144vw , 137.3125rem )) {
+  @supports not (width: clamp( 59.9375rem , 35.4519032922rem  +  115.2263374486vw , 129.9375rem )) {
     .main__gallery-flavours_light {
-      width: calc(75.125rem + 62.1875 * (100vw - 21.25rem) / 60.75);
+      width: calc(59.9375rem + 70 * (100vw - 21.25rem) / 60.75);
     }
   }
 }
 @media (max-width: 21.25em) {
   .main__gallery-flavours_light {
-    width: 75.125rem;
+    width: 59.9375rem;
   }
 }
 @media (min-width: 82em) {
   .main__gallery-flavours_light {
-    height: 136.9375rem;
+    height: 129.5625rem;
   }
 }
 @media (min-width: 21.25em) and (max-width: 82em) {
-  @supports (height: clamp( 74.875rem , 53.1658950617rem  +  102.1604938272vw , 136.9375rem )) {
+  @supports (height: clamp( 59.625rem , 35.1612654321rem  +  115.1234567901vw , 129.5625rem )) {
     .main__gallery-flavours_light {
-      height: clamp( 74.875rem , 53.1658950617rem  +  102.1604938272vw , 136.9375rem );
+      height: clamp( 59.625rem , 35.1612654321rem  +  115.1234567901vw , 129.5625rem );
     }
   }
-  @supports not (height: clamp( 74.875rem , 53.1658950617rem  +  102.1604938272vw , 136.9375rem )) {
+  @supports not (height: clamp( 59.625rem , 35.1612654321rem  +  115.1234567901vw , 129.5625rem )) {
     .main__gallery-flavours_light {
-      height: calc(74.875rem + 62.0625 * (100vw - 21.25rem) / 60.75);
+      height: calc(59.625rem + 69.9375 * (100vw - 21.25rem) / 60.75);
     }
   }
 }
 @media (max-width: 21.25em) {
   .main__gallery-flavours_light {
-    height: 74.875rem;
-  }
-}
-@media (max-width: 61.99875em) {
-  .main__gallery-flavours_light {
-    left: -40%;
+    height: 59.625rem;
   }
 }
 @media (min-width: 82em) {
