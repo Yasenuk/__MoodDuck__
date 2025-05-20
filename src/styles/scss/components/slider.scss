@@ -38,8 +38,13 @@
 	display: none;
 }
 
-.swiper-slide:active {
-	cursor: grab;
+.swiper-slide {
+	user-select: none;
+	overflow: hidden;
+
+	&:active {
+		cursor: grab;
+	}
 }
 
 .swiper-pagination {
@@ -132,6 +137,10 @@
 }
 
 .swiper-card {
+	.swiper-wrapper {
+		max-width: $pc;
+	}
+
 	@media (max-width: $mobile) {
 		overflow: hidden;
 	}
