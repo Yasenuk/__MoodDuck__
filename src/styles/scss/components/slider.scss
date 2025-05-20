@@ -1,6 +1,6 @@
 .swiper {
-	// overflow: hidden;
 }
+
 .swiper-initialized {
 	touch-action: pan-y;
 }
@@ -41,6 +41,7 @@
 .swiper-slide {
 	user-select: none;
 	overflow: hidden;
+	position: relative;
 
 	&:active {
 		cursor: grab;
@@ -53,7 +54,7 @@
 	z-index: 30;
 
 	@media (max-width: $mobile) {
-		margin-bottom: toRem(20);
+		margin-top: toRem(20);
 	}
 }
 
@@ -122,7 +123,6 @@
 	display: flex;
 	align-items: end;
 	justify-content: space-between;
-	flex-direction: row-reverse;
 	@include adaptiveValue(margin-top, 20, 10);
 
 	@media (max-width: $mobile) {
@@ -130,10 +130,37 @@
 		align-items: center;
 		justify-content: start;
 	}
+
+	&_center {
+		width: 100%;
+		justify-content: center;
+
+		.swiper-buttons {
+			width: 100%;
+			justify-content: space-between;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			translate: -50% -50%;
+			@include adaptiveValue(padding-inline, 13, 8);
+		}
+
+		.swiper-pagination {
+			justify-content: center;
+		}
+	}
 }
 
 .swiper-banner {
 	overflow: hidden;
+
+	display: flex;
+	flex-direction: column;
+
+	.swiper-slide {
+		border-radius: toRem(20);
+		border: toRem(1) solid $mainColorLight;
+	}
 }
 
 .swiper-card {

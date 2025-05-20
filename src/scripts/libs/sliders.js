@@ -34,12 +34,12 @@ function initSliders() {
 			// Підключаємо модулі слайдера
 			// для конкретного випадку
 			modules: [Navigation, Pagination],
-			observer: true,
-			observeParents: true,
+			// observer: true,
+			// observeParents: true,
 			slidesPerView: 1,
 			spaceBetween: 20,
 			//autoHeight: true,
-			speed: 800,
+			// speed: 800,
 
 			//touchRatio: 0,
 			//simulateTouch: false,

@@ -1,5 +1,19 @@
 // Заголовки, загальні БЕМ блоки та інше...
 
+.banner {
+	max-width: 100%;
+	height: 100%;
+	object-fit: cover;
+	
+	&_center {
+		object-position: center;
+	}
+
+	&_right {
+		object-position: right center;
+	}
+}
+
 .heading {
 	display: flex;
 	align-items: end;
@@ -77,7 +91,7 @@
 		position: relative;
 		// background: rgba(17, 17, 17, 1);
 		background: url(../../images/alternative/noise.png) no-repeat center / cover;
-		padding: toRem(3);
+		// padding: toRem(3);
 
 		picture {
 			width: 100%;
