@@ -587,6 +587,63 @@
 .resources-library {
 	&__container {
 	}
+
+	&__wrap {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__content {
+		flex: 1 1 50%;
+		font-weight: 500;
+		padding-top: toRem(60);
+		padding-bottom: toRem(60);
+		@include adaptiveValue(padding-left, 44, 0);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	&__description {
+
+	}
+
+	&__paragraph {
+		font-size: toRem(20);
+		line-height: toRem(24);
+
+		&:not(:last-child) {
+			margin-bottom: toRem(24);
+		}
+	}
+
+	&__footer {
+		display: flex;
+		align-items: center;
+	}
+
+	&__more-button {
+		margin-right: toRem(26);
+	}
+
+	&__button-description {
+		max-width: toRem(195);
+		font-size: toRem(16);
+	}
+
+	&__cube {
+		flex: 1 1 50%;
+		display: flex;
+		align-items: center;
+		justify-content: end;
+		position: relative;
+	}
+
+	&__picture-set {
+	}
+
+	&__image {
+	}
 }
 
 .reviews {
