@@ -1,56 +1,62 @@
 .main {
-	position: relative;
-	// overflow-x: hidden;
-	background: $mainColor;
+	// overflow: hidden;
+	// background: $mainColor;
 
 	&__bg {
 		position: absolute;
 		width: 100%;
-		height: 100%;
+		top: 0;
+		z-index: -100;
+		pointer-events: none;
+	}
+
+	&__bg-group {
+		position: absolute;
+		width: 100%;
 		left: 0;
 		top: 0;
-		z-index: -1;
-		pointer-events: none;
 
-		picture {
-			position: absolute;
-			width: 100%;
+		&_noises {
 		}
-		
+
+		&_lights {
+		}
+
+		&_graffities {
+		}
+	}
+
+	&__bg-picture {
+		display: block;
+		height: 100%;
+
 		img {
+			width: 100%;
+			height: 100%;
 			object-fit: cover;
 			object-position: center bottom;
 		}
-		
-		&_noise {
-			image-rendering: pixelated;
-		}
-		
-		&_noise,
-		&_graffiti {
-			max-width: 100%;
-			width: 100%;
-		}
+	}
 
-		&_graffiti {
-			opacity: 0.2;
-			mix-blend-mode: darken;
-		}
+	&__bg-picture-noise {
+		// opacity: 0.6;
+	}
 
-		&_light {
-			display: none;
-			position: absolute;
-		}
+	&__bg-picture-light {
+		position: absolute;
+	}
+
+	&__bg-picture-graffiti {
+		opacity: 0.2;
+		mix-blend-mode: darken;
 	}
 
 	& > * {
 		position: relative;
-		z-index: 3;
 	}
 
 	&__hero {
 		&_light {
-			display: block;
 			@include adaptiveValue(width, 2197, 1202);
 			@include adaptiveValue(height, 2191, 1198);
 			top: 0;
@@ -58,7 +64,6 @@
 			translate: 0 -70%;
 
 			@media (max-width: $tablet) {
-				top: 15%;
 				left: 45%;
 			}
 		}
@@ -66,14 +71,14 @@
 
 	&__gallery-flavours {
 		&_light {
-			display: block;
 			@include adaptiveValue(width, 2079, 959);
 			@include adaptiveValue(height, 2073, 954);
 			top: 100%;
 			left: 50%;
-			translate: -185% -50%;
+			translate: -120% 0;
 
 			@media (max-width: $tablet) {
+				left: 40%;
 			}
 		}
 	}
@@ -83,7 +88,6 @@
 
 	&__about {
 		&_light {
-			display: block;
 			@include adaptiveValue(width, 2079, 959);
 			@include adaptiveValue(height, 2073, 954);
 			top: 100%;
@@ -93,6 +97,7 @@
 	}
 
 	&__brand-info {
+		
 	}
 
 	&__flavours-info {
@@ -112,6 +117,7 @@
 
 	[class$="__container"] {
 		@include adaptiveValue(padding-bottom, 200, 60);
+		position: relative;
 	}
 }
 
@@ -135,6 +141,10 @@
 
 .gallery-flavours {
 	&__container {
+	}
+
+	&__subtitle {
+		@include adaptiveValue(max-width, 330, 316);
 	}
 
 	&__slider {
@@ -170,10 +180,24 @@
 .gallery-merch {
 	&__container {
 	}
+
+	&__subtitle {
+		@include adaptiveValue(max-width, 288, 316);
+	}
 }
 
 .about {
 	&__container {
+	}
+
+	&__subtitle {
+		@include adaptiveValue(max-width, 330, 316);
+	}
+
+	&__decorative-duck {
+		right: 0;
+		top: 0;
+		translate: 10% -60%;
 	}
 
 	&__content-wrapper {
@@ -181,7 +205,7 @@
 		justify-content: space-between;
 		position: relative;
 
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			flex-direction: column;
 			align-items: center;
 			justify-content: start;
@@ -192,9 +216,9 @@
 		@include adaptiveValue(margin-right, 30, 10, 0, $maxWidth, $p-tablet);
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
+		// justify-content: space-between;
 
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			margin-right: 0;
 		}
 	}
@@ -203,6 +227,7 @@
 		font-weight: 500;
 		font-size: toRem(20);
 		line-height: 1.2;
+		margin-bottom: toRem(24);
 
 		&_accent {
 			text-transform: uppercase;
@@ -210,8 +235,13 @@
 	}
 
 	&__banners {
-		width: 50%;
+		max-width: 50%;
+		width: 100%;
 		position: relative;
+
+		@media (max-width:$tablet){
+			max-width: 100%;
+		}
 	}
 
 	&__slider {
@@ -250,13 +280,236 @@
 
 .brand-info {
 	&__container {
+		position: relative;
+
+		&::before,&::after{
+			content:'';
+			position: absolute;
+			width: toRem(208);
+			top: toRem(15);
+			height: 100%;
+			opacity: 0.4;
+			z-index: -1;
+			background-image: url(../../images/alternative/background-ducks.png);
+
+			.webp & {
+				background-image: url(../../images/alternative/background-ducks.webp);
+			}
+
+			background-repeat: no-repeat;
+			background-size: cover;
+
+			mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+			mask-size: 100% 100%;
+			mask-repeat: no-repeat;
+
+			@media (max-width:$tablet){
+				background: none;
+				display: none;
+			}
+		}
+
+		&::before{
+			right: 100%;
+			background-position: left bottom;
+			translate: 50% 0;
+		}
+		
+		&::after{
+			left: 100%;
+			background-position: right bottom;
+			translate: -50% 0;
+		}
+	}
+
+	&__conent-wrapper {
+		max-width: toRem(880);
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin: 0 auto;
+	}
+
+	&__column {
+		flex: 1 1 toRem(286);
+		// max-width: toRem(286);
+		min-height: toRem(772);
+		display: flex;
+		flex-wrap: wrap;
+		// flex-direction: column;
+		justify-content: space-between;
+
+		@media (max-width:$tablet){
+			min-height: auto;
+		}
+
+		// &:not(:last-child) {
+		// 	margin-right: toRem(8);
+		// }
+
+		& > * {
+			flex: 1 1 toRem(382);
+		}
+
+		&:nth-child(1) {
+			& > *:first-child {
+				flex: 1 1 toRem(433);
+			}
+
+			& > *:last-child {
+				flex: 1 1 toRem(331);
+			}
+		}
+
+		&:nth-child(3) {
+			& > *:first-child {
+				flex: 1 1 toRem(331);
+			}
+
+			& > *:last-child {
+				flex: 1 1 toRem(433);
+			}
+		}
+	}
+
+	&__item {
+		flex: 1 1 toRem(286);
+		background: $mainColorLight;
+		color: $mainColor;
+		border-radius: toRem(20);
+		padding: toRem(10);
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		margin-right: toRem(8);
+		margin-bottom: toRem(8);
+
+		// &:not(:last-child) {
+		// }
+	}
+
+	&__item-title {
+		flex: 1 1 100%;
+		padding: toRem(20) toRem(20) toRem(30);
+		border-radius: toRem(10);
+		background: $accentColor;
+		font-size: toRem(26);
+		font-weight: 600;
+
+		&_accent {
+			display: block;
+			font-size: toRem(120);
+			font-weight: 500;
+		}
+
+		@media (max-width:$mobile){
+			padding-bottom: toRem(30);
+		}
+	}
+
+	&__item-description {
+		padding: toRem(20);
+	}
+
+	&__paragraph {
+		font-weight: 500;
+		line-height: toRem(20);
+		
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
 	}
 }
+
 
 .flavours-info {
 	&__container {
 	}
+
+	&__wrap {
+		width: 100%;
+		display: flex;
+
+		@media (max-width:$tablet){
+			flex-wrap: wrap;
+		}
+	}
+
+	&__card {
+		border-radius: toRem(20);
+		background: $mainColorLight;
+		flex: 1 1 auto;
+		margin-bottom: toRem(8);
+		padding: toRem(10);
+
+		display: flex;
+		flex-direction: column;
+
+		&:not(:last-child) {
+			margin-right: toRem(8);
+		}
+	}
+
+	&__picture {
+		width: 100%;
+		@include adaptiveValue(height, 170, 127);
+		border-radius: toRem(10);
+		overflow: hidden;
+	}
+
+	&__picture-set {
+		
+	}
+
+	&__image {
+		aspect-ratio: 206 / 85;
+		width: 100%;
+		object-fit: cover;
+		object-position: center center;
+	}
+
+	&__picture-description {
+	}
+
+	&__list {
+		flex: 1 1 auto;
+		@include adaptiveValue(margin-block, 30, 16);
+		padding-left: toRem(33);
+	}
+	
+	&__item-list {
+		list-style: disc;
+		color: $mainColor;
+		font-weight: 500;
+		font-size: toRem(18);
+		line-height: toRem(24);
+		position: relative;
+
+		&:not(:last-child) {
+			margin-bottom: toRem(12);
+		}
+
+		&::marker {
+			color: $accentColor;
+		}
+
+		&_flavour {
+			display: block;
+		}
+	}
+
+	&__more-button {
+		width: 100%;
+
+		i {
+			transform: rotateZ(-45deg);
+		}
+	}
 }
+
 
 .price-policy {
 	&__container {
