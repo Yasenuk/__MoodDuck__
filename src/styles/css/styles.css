@@ -718,15 +718,19 @@ body._locked {
 }
 
 .button {
-  display: inline-block;
   padding: 1.25rem 2.5rem;
   transition: background-color 0.3s;
   background: var(--button-color);
   color: var(--text-color-light);
   font-size: 1.1875rem;
   font-weight: 600;
-  text-align: center;
   border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button i {
+  margin-left: 0.25rem;
 }
 @media (any-hover: hover) {
   .button:hover {
@@ -932,6 +936,9 @@ body._locked {
   position: relative;
   background: url(../../images/alternative/noise.png) no-repeat center/cover;
 }
+.webp .product-card__picture {
+  background: url(../../images/alternative/noise.webp) no-repeat center/cover;
+}
 .product-card__picture picture {
   width: 100%;
   height: 100%;
@@ -966,7 +973,7 @@ body._locked {
   font-size: 1rem;
   color: var(--text-color-dark);
   text-align: center;
-  max-width: 12.1875rem;
+  max-width: 13.125rem;
 }
 .product-card__name {
   font-weight: 600;
@@ -1249,6 +1256,9 @@ body._locked {
   margin-bottom: 1rem;
 }
 
+.main {
+  overflow: hidden;
+}
 .main__bg {
   position: absolute;
   width: 100%;
@@ -1875,7 +1885,6 @@ body._locked {
   margin-bottom: 0.75rem;
 }
 .flavours-info__item-list::marker {
-  padding-top: 1.25rem;
   color: var(--accent-color);
 }
 .flavours-info__item-list_flavour {
@@ -1886,4 +1895,67 @@ body._locked {
 }
 .flavours-info__more-button i {
   transform: rotateZ(-45deg);
+}
+
+.price-policy__cards {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  flex-wrap: wrap;
+}
+@media (max-width: 47.99875em) {
+  .price-policy__cards {
+    flex-direction: column;
+  }
+}
+.price-policy__decorative-duck {
+  left: 0;
+  top: 0;
+  translate: -20% -80%;
+}
+.price-policy__card {
+  flex: 1 1 auto;
+  background: var(--text-color-light);
+  border-radius: 1.25rem;
+  color: var(--text-color-dark);
+  text-align: center;
+  padding: 2.1875rem 0;
+}
+.price-policy__card:not(:last-child) {
+  margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
+}
+@media (max-width: 61.99875em) {
+  .price-policy__card {
+    margin-right: 0;
+    flex: 1 1 calc(50% - 0.5rem);
+  }
+}
+.price-policy__card_light {
+  background: var(--accent-color);
+  box-shadow: 0 0 0.75rem var(--accent-color);
+}
+@media (max-width: 61.99875em) {
+  .price-policy__card_light {
+    order: 1;
+  }
+}
+@media (max-width: 47.99875em) {
+  .price-policy__card_light {
+    display: none;
+  }
+}
+.price-policy__card-title {
+  font-family: "Bebas Neue Cyrillic";
+  font-size: 4.375rem;
+  margin-bottom: 0.625rem;
+}
+.price-policy__card-price {
+  font-weight: 600;
+  font-size: 1.625rem;
+  padding: 0.625rem 0.75rem;
+  background: var(--accent-color);
+  border-radius: 0.5rem;
+  display: inline-block;
+  margin: 0 auto;
 }

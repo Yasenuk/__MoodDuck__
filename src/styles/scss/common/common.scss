@@ -1,15 +1,20 @@
 // Заголовки, загальні БЕМ блоки та інше...
 
 .button {
-	display: inline-block;
 	padding: toRem(20) toRem(40);
 	transition: background-color 0.3s;
 	background: $buttonColor;
 	color: $mainColorLight;
 	font-size: toRem(19);
 	font-weight: 600;
-	text-align: center;
 	border-radius: toRem(12);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	i {
+		margin-left: toRem(4);
+	}
 
 	@media (any-hover: hover){
 		&:hover{
@@ -115,6 +120,10 @@
 		position: relative;
 		// background: rgba(17, 17, 17, 1);
 		background: url(../../images/alternative/noise.png) no-repeat center / cover;
+
+		.webp & {
+			background: url(../../images/alternative/noise.webp) no-repeat center / cover;
+		}
 		// padding: toRem(3);
 
 		picture {
@@ -163,7 +172,7 @@
 		font-size: toRem(16);
 		color: $mainColor;
 		text-align: center;
-		max-width: toRem(195);
+		max-width: toRem(210);
 	}
 
 	&__name {

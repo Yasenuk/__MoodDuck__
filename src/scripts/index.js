@@ -5,7 +5,7 @@ import { _Module } from './module.js'
 functions.isWebp();
 
 /* Додавання loaded для HTML після повного завантаження сторінки */
-// functions.isPageLoad();
+functions.isPageLoad();
 
 /* Додавання класу touch для HTML якщо браузер мобільний */
 // functions.isTouch();
@@ -25,3 +25,11 @@ _Module.burger_menu.init();
 
 /* Робота зі слайдером */
 import "./libs/sliders.js";
+
+// const main = document.querySelector("main");
+// const main_bg = document.querySelector(".main__bg");
+
+// console.log(main.clientHeight, main_bg);
+
+
+// main_bg.style.height = `${main.clientHeight}px`;

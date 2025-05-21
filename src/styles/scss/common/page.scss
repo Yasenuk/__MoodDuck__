@@ -1,5 +1,5 @@
 .main {
-	// overflow: hidden;
+	overflow: hidden;
 	// background: $mainColor;
 
 	&__bg {
@@ -513,6 +513,74 @@
 
 .price-policy {
 	&__container {
+	}
+
+	&__cards {
+		display: flex;
+		justify-content: center;
+		position: relative;
+		flex-wrap: wrap;
+
+		@media (max-width:$tablet){
+		}
+
+		@media (max-width:$mobile){
+			flex-direction: column;
+		}
+	}
+
+	&__decorative-duck {
+		left: 0;
+		top: 0;
+		translate: -20% -80%;
+	}
+
+	&__card {
+		flex: 1 1 auto;
+		background: $mainColorLight;
+		border-radius: toRem(20);
+		color: $mainColor;
+		text-align: center;
+		padding: toRem(35) 0;
+
+		&:not(:last-child) {
+			margin-bottom: toRem(8);
+			margin-right: toRem(8);
+		}
+
+		@media (max-width:$tablet){
+			margin-right: 0;
+			flex: 1 1 calc(50% - toRem(8));
+		}
+
+		&_light {
+			background: $accentColor;
+			box-shadow: 0 0 toRem(12) $accentColor;
+
+			@media (max-width:$tablet){
+				order: 1;
+			}
+
+			@media (max-width:$mobile){
+				display: none;
+			}
+		}
+	}
+
+	&__card-title {
+		font-family: $headingFont;
+		font-size: toRem(70);
+		margin-bottom: toRem(10);
+	}
+
+	&__card-price {
+		font-weight: 600;
+		font-size: toRem(26);
+		padding: toRem(10) toRem(12);
+		background: $accentColor;
+		border-radius: toRem(8);
+		display: inline-block;
+		margin: 0 auto;
 	}
 }
 
