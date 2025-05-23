@@ -34,8 +34,8 @@ function initSliders() {
 			// Підключаємо модулі слайдера
 			// для конкретного випадку
 			modules: [Navigation, Pagination],
-			observer: true,
-			observeParents: true,
+			// observer: true,
+			// observeParents: true,
 			slidesPerView: 1,
 			spaceBetween: 20,
 			//autoHeight: true,
@@ -105,9 +105,9 @@ function initSliders() {
 	if (document.querySelector(".swiper-card")) {
 		new Swiper(".swiper-card", {
 			modules: [Navigation, Pagination],
-			observer: true,
-			observeParents: true,
-			slidesPerView: "auto",
+			// observer: true,
+			// observeParents: true,
+			slidesPerView: 1,
 			spaceBetween: 8,
 			//autoHeight: true,
 			speed: 800,
@@ -115,7 +115,7 @@ function initSliders() {
 			//touchRatio: 0,
 			//simulateTouch: false,
 			//loop: true,
-			preloadImages: false,
+			// preloadImages: false,
 			lazy: true,
 
 			/*

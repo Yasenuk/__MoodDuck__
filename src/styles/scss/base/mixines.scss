@@ -105,3 +105,17 @@
 		}
 	}
 }
+
+@function adaptiveVar($max, $min, $widthFrom: $containerWidth, $widthTo: $minWidth) {
+	$maxRem: toRem($max);
+	$minRem: toRem($min);
+
+	// Рахуємо коефіцієнт для clamp
+	$diff: $max - $min;
+	$slope: ($diff / ($widthFrom - $widthTo)) * 100vw;
+
+	$value: clamp(#{$minRem}, #{toRem($min)} + #{$slope}, #{$maxRem});
+
+	@return #{$value};
+}
+

@@ -2,7 +2,7 @@ import * as functions from "./functions/functions.js";
 import { _Module } from './module.js'
 
 /** Для коректного відображення webp із css */
-functions.isWebp();
+// functions.isWebp();
 
 /* Додавання loaded для HTML після повного завантаження сторінки */
 functions.isPageLoad();

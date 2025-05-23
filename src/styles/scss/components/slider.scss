@@ -164,9 +164,9 @@
 }
 
 .swiper-card {
-	.swiper-wrapper {
-		max-width: $pc;
-	}
+	// .swiper-wrapper {
+	// 	max-width: $pc;
+	// }
 
 	@media (max-width: $mobile) {
 		overflow: hidden;

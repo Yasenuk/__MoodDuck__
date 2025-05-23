@@ -1,5 +1,9 @@
 // Заголовки, загальні БЕМ блоки та інше...
 
+.-nowrap {
+	white-space: nowrap;
+}
+
 .button {
 	padding: toRem(20) toRem(40);
 	transition: background-color 0.3s;

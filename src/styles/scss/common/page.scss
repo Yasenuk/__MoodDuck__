@@ -17,6 +17,7 @@
 		top: 0;
 
 		&_noises {
+			position: fixed;
 		}
 
 		&_lights {
@@ -530,9 +531,10 @@
 	}
 
 	&__decorative-duck {
+		@include adaptiveValue(width, 98, 57);
 		left: 0;
 		top: 0;
-		translate: -20% -80%;
+		translate: -20% -70%;
 	}
 
 	&__card {
@@ -590,7 +592,15 @@
 
 	&__wrap {
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: space-between;
+		position: relative;
+
+		@media (max-width:$tablet){
+			flex-direction: column;
+			justify-content: start;
+			align-items: center;
+		}
 	}
 
 	&__content {
@@ -602,10 +612,15 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+
+		@media (max-width:$tablet){
+			padding-left: 0;
+		}
 	}
 
 	&__description {
-
+		// flex: 1 1 50%;
+		// order: 1;
 	}
 
 	&__paragraph {
@@ -615,6 +630,10 @@
 		&:not(:last-child) {
 			margin-bottom: toRem(24);
 		}
+
+		// @media (max-width:$mobile){
+		// 	order: 1;
+		// }
 	}
 
 	&__footer {
@@ -634,9 +653,13 @@
 	&__cube {
 		flex: 1 1 50%;
 		display: flex;
-		align-items: center;
-		justify-content: end;
+		justify-content: center;
 		position: relative;
+
+		@media (max-width:$tablet){
+			@include adaptiveValue(margin-bottom, 44, 30);
+			order: 1;
+		}
 	}
 
 	&__picture-set {
