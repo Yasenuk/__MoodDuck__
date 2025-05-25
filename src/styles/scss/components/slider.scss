@@ -1,4 +1,7 @@
 .swiper {
+	@media (max-width: $mobile) {
+		overflow: hidden;
+	}
 }
 
 .swiper-initialized {
@@ -48,10 +51,6 @@
 	&-active {
 		transition: opacity 0.3s;
 		opacity: 1;
-	}
-
-	&:active {
-		cursor: grab;
 	}
 }
 
@@ -167,15 +166,5 @@
 	.swiper-slide {
 		border-radius: toRem(20);
 		border: toRem(1) solid $mainColorLight;
-	}
-}
-
-.swiper-card {
-	.swiper-wrapper {
-		// max-width: $pc;
-	}
-
-	@media (max-width: $mobile) {
-		overflow: hidden;
 	}
 }

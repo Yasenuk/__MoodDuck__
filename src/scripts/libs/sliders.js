@@ -27,33 +27,6 @@ function initSliders() {
 	// Список слайдерів
 	// Перевіряємо, чи є слайдер на сторінці
 
-	function updateSlideClasses(swiper) {
-		const slides = swiper.slides;
-		const activeIndex = swiper.activeIndex;
-		const slidesPerView = swiper.params.slidesPerView;
-		const visibleCount =
-			typeof slidesPerView === "number"
-				? slidesPerView
-				: swiper.currentBreakpoint
-				? swiper.params.breakpoints[swiper.currentBreakpoint].slidesPerView
-				: 1;
-
-		slides.forEach((slide, index) => {
-			// Знімаємо всі класи
-			slide.classList.remove("slide-active");
-			slide.classList.remove("slide-inactive");
-
-			// Активний перший у групі
-			if (index >= activeIndex && index < activeIndex + visibleCount) {
-				if (index === activeIndex) {
-					slide.classList.add("slide-active");
-				} else {
-					slide.classList.add("slide-inactive");
-				}
-			}
-		});
-	}	
-
 	if (document.querySelector(".swiper-banner")) {
 		// Вказуємо склас потрібного слайдера
 		// Створюємо слайдер
@@ -68,6 +41,7 @@ function initSliders() {
 			spaceBetween: 20,
 			//autoHeight: true,
 			speed: 800,
+			grabCursor: true,
 
 			//touchRatio: 0,
 			//simulateTouch: false,
@@ -133,28 +107,27 @@ function initSliders() {
 	if (document.querySelector(".swiper-card")) {
 		new Swiper(".swiper-card", {
 			modules: [Navigation, Pagination],
-			// observer: true,
-			// observeParents: true,
-			slidesPerView: 1,
-			slidesPerGroup: 1,
+			grabCursor: true,
+			slidesPerView: "auto",
 			spaceBetween: 8,
-			//autoHeight: true,
 			speed: 800,
+			// centeredSlides: true,
 
 			//touchRatio: 0,
 			//simulateTouch: false,
-			//loop: true,
-			preloadImages: false,
-			lazy: true,
+			// loop: true,
 
-			/*
-			// Ефекти
-			effect: 'fade',
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
+			// loop: true,
+			loopedSlides: 21,
+
+			preloadImages: false,
+			lazy: {
+				loadPrevNext: true,
+				loadOnTransitionStart: true,
 			},
-			*/
+
+			watchSlidesProgress: true,
+			freeMode: true,
 
 			// Пагінація
 			pagination: {
@@ -182,14 +155,59 @@ function initSliders() {
 			},
 
 			// Події
-			on: {
-				slideChange: function () {
-					updateSlideClasses(this);
+			on: {},
+		});
+	}
+
+	if (document.querySelector(".swiper-review")) {
+		new Swiper(".swiper-review", {
+			modules: [Navigation, Pagination],
+			grabCursor: true,
+			slidesPerView: 2,
+			spaceBetween: 8,
+			speed: 800,
+			// centeredSlides: true,
+
+			//touchRatio: 0,
+			//simulateTouch: false,
+			// loop: true,
+
+			// loop: true,
+			loopedSlides: 21,
+
+			preloadImages: false,
+			lazy: {
+				loadPrevNext: true,
+				loadOnTransitionStart: true,
+			},
+
+			watchSlidesProgress: true,
+			freeMode: true,
+
+			// Пагінація
+			pagination: {
+				el: ".swiper-pagination",
+				clickable: true,
+			},
+
+			// Кнопки "вліво/вправо"
+			navigation: {
+				prevEl: ".swiper-button-prev",
+				nextEl: ".swiper-button-next",
+			},
+
+			// Брейкпоінти
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
 				},
-				init: function () {
-					updateSlideClasses(this);
+				992: {
+					slidesPerView: 2,
 				},
 			},
+
+			// Події
+			on: {},
 		});
 	}
 }

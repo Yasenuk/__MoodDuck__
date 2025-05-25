@@ -98,7 +98,6 @@
 	}
 
 	&__brand-info {
-		
 	}
 
 	&__flavours-info {
@@ -218,6 +217,7 @@
 		display: flex;
 		flex-direction: column;
 		// justify-content: space-between;
+		margin-bottom: toRem(64);
 
 		@media (max-width: $tablet) {
 			margin-right: 0;
@@ -240,7 +240,7 @@
 		width: 100%;
 		position: relative;
 
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			max-width: 100%;
 		}
 	}
@@ -283,8 +283,9 @@
 	&__container {
 		position: relative;
 
-		&::before,&::after{
-			content:'';
+		&::before,
+		&::after {
+			content: "";
 			position: absolute;
 			width: toRem(208);
 			top: toRem(15);
@@ -300,23 +301,29 @@
 			background-repeat: no-repeat;
 			background-size: cover;
 
-			mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+			mask-image: linear-gradient(
+				to bottom,
+				transparent 0%,
+				black 10%,
+				black 90%,
+				transparent 100%
+			);
 			mask-size: 100% 100%;
 			mask-repeat: no-repeat;
 
-			@media (max-width:$tablet){
+			@media (max-width: $tablet) {
 				background: none;
 				display: none;
 			}
 		}
 
-		&::before{
+		&::before {
 			right: 100%;
 			background-position: left bottom;
 			translate: 50% 0;
 		}
-		
-		&::after{
+
+		&::after {
 			left: 100%;
 			background-position: right bottom;
 			translate: -50% 0;
@@ -341,7 +348,7 @@
 		// flex-direction: column;
 		justify-content: space-between;
 
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			min-height: auto;
 		}
 
@@ -406,7 +413,7 @@
 			font-weight: 500;
 		}
 
-		@media (max-width:$mobile){
+		@media (max-width: $mobile) {
 			padding-bottom: toRem(30);
 		}
 	}
@@ -418,13 +425,12 @@
 	&__paragraph {
 		font-weight: 500;
 		line-height: toRem(20);
-		
+
 		&:not(:last-child) {
 			margin-bottom: toRem(20);
 		}
 	}
 }
-
 
 .flavours-info {
 	&__container {
@@ -434,7 +440,7 @@
 		width: 100%;
 		display: flex;
 
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			flex-wrap: wrap;
 		}
 	}
@@ -462,7 +468,6 @@
 	}
 
 	&__picture-set {
-		
 	}
 
 	&__image {
@@ -480,7 +485,7 @@
 		@include adaptiveValue(margin-block, 30, 16);
 		padding-left: toRem(33);
 	}
-	
+
 	&__item-list {
 		list-style: disc;
 		color: $mainColor;
@@ -511,7 +516,6 @@
 	}
 }
 
-
 .price-policy {
 	&__container {
 	}
@@ -522,10 +526,10 @@
 		position: relative;
 		flex-wrap: wrap;
 
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 		}
 
-		@media (max-width:$mobile){
+		@media (max-width: $mobile) {
 			flex-direction: column;
 		}
 	}
@@ -550,7 +554,7 @@
 			margin-right: toRem(8);
 		}
 
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			margin-right: 0;
 			flex: 1 1 calc(50% - toRem(8));
 		}
@@ -559,11 +563,11 @@
 			background: $accentColor;
 			box-shadow: 0 0 toRem(12) $accentColor;
 
-			@media (max-width:$tablet){
+			@media (max-width: $tablet) {
 				order: 1;
 			}
 
-			@media (max-width:$mobile){
+			@media (max-width: $mobile) {
 				display: none;
 			}
 		}
@@ -596,7 +600,7 @@
 		justify-content: space-between;
 		position: relative;
 
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			flex-direction: column;
 			justify-content: start;
 			align-items: center;
@@ -613,7 +617,7 @@
 		flex-direction: column;
 		justify-content: space-between;
 
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			padding-left: 0;
 		}
 	}
@@ -641,7 +645,7 @@
 		align-items: center;
 	}
 
-	&__more-button {
+	&__button {
 		margin-right: toRem(26);
 	}
 
@@ -656,7 +660,7 @@
 		justify-content: center;
 		position: relative;
 
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			@include adaptiveValue(margin-bottom, 44, 30);
 			order: 1;
 		}
@@ -671,6 +675,188 @@
 
 .reviews {
 	&__container {
+	}
+
+	&__slider {
+	}
+
+	&__wrapper {
+	}
+
+	&__slide {
+	}
+
+	&__card {
+		display: flex;
+		flex-direction: column;
+
+		background-color: $mainColorLight;
+		border-radius: toRem(20);
+
+		@include adaptiveValue(max-height, 395, 490);
+		@include adaptiveValue(height, 395, 490);
+	}
+
+	&__conrtol {
+	}
+
+	&__slider-buttons {
+	}
+
+	&__slider-button {
+		&_prev {
+		}
+
+		&_next {
+		}
+	}
+
+	&__pagination {
+	}
+
+	&__button {
+		margin: 0 auto;
+		@include adaptiveValue(margin-top, 30, 50);
+	}
+}
+
+.card-review {
+	.swiper-slide-active & {
+		border: toRem(3) solid $accentColor;
+	}
+
+	@include adaptiveValue(padding-top, 30, 20);
+	@include adaptiveValue(padding-left, 30, 20);
+	@include adaptiveValue(padding-bottom, 40, 30);
+	@include adaptiveValue(padding-right, 30, 20);
+
+	color: $mainColor;
+
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+
+		@media (max-width:$mobile){
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	&__user-info {
+		display: flex;
+	}
+
+	&__avatar {
+		aspect-ratio: 1 / 1;
+		width: toRem(44);
+		border-radius: 50%;
+		background-color: rgba(147, 147, 147, 1);
+		overflow: hidden;
+		margin-right: toRem(10);
+	}
+
+	&__info-group {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		line-height: toRem(20);
+	}
+
+	&__user-name {
+		font-weight: 600;
+	}
+
+	&__datetime {
+		font-weight: 500;
+		font-size: toRem(14);
+	}
+
+	&__rating {
+		display: flex;
+		align-items: center;
+		justify-content: end;
+
+		@media (max-width:$mobile){
+			margin-top: toRem(24);
+		}
+	}
+
+	&__rating-item {
+		@include adaptiveValue(font-size, 25, 22);
+		color: rgba(147, 147, 147, 1);
+
+		&:not(:last-child) {
+			margin-right: toRem(2);
+		}
+
+		&_active {
+			color: $accentColor;
+		}
+	}
+
+	&__content {
+		flex: 1 1 auto;
+		font-weight: 500;
+		line-height: toRem(20);
+		@include adaptiveValue(margin-block, 40, 24);
+	}
+
+	&__paragraph {
+		text-overflow: ellipsis;
+
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+	}
+
+	&__footer {
+		display: flex;
+		justify-content: space-between;
+
+		@media (max-width:$mobile){
+			flex-direction: column;
+			align-items: center;
+			justify-content: start;
+			text-align: center;
+		}
+	}
+
+	&__pluses {
+		margin-right: toRem(20);
+
+		@media (max-width:$mobile){
+			margin-right: 0;
+			margin-bottom: toRem(24);
+		}
+	}
+
+	&__pluses,
+	&__minuses {
+		flex: 1 1 50%;
+	}
+
+	&__group-title {
+		font-size: toRem(16);
+		font-weight: 600;
+		line-height: toRem(20);
+		@include adaptiveValue(margin-bottom, 20, 10);
+	}
+
+	&__list {
+		font-size: toRem(16);
+		font-weight: 500;
+		line-height: toRem(18);
+	}
+
+	&__pluses-list {
+	}
+
+	&__minuses {
+	}
+
+	&__minusess-list {
 	}
 }
 

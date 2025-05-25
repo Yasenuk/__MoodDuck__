@@ -16,7 +16,8 @@
 	align-items: center;
 	justify-content: center;
 
-	i {
+	[class^=icon-] {
+		font-size: toRem(17);
 		margin-left: toRem(4);
 	}
 
