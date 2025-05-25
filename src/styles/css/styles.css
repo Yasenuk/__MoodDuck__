@@ -481,6 +481,12 @@ body._locked {
   user-select: none;
   overflow: hidden;
   position: relative;
+  transition: opacity 0.3s;
+  opacity: 0.5;
+}
+.swiper-slide-active {
+  transition: opacity 0.3s;
+  opacity: 1;
 }
 .swiper-slide:active {
   cursor: grab;

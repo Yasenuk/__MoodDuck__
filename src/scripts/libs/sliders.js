@@ -8,12 +8,12 @@
 // При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
 // Приклад: { Navigation, Autoplay }
 
-import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper.mjs";
+import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper.min.mjs";
 import {
 	Navigation,
 	Autoplay,
 	Pagination,
-} from "https://cdn.jsdelivr.net/npm/swiper@11/modules/index.mjs";
+} from "https://cdn.jsdelivr.net/npm/swiper@11/modules/index.min.mjs";
 
 /*
 Основні модулі слайдера:
@@ -26,6 +26,34 @@ EffectFade, Lazy, Manipulation
 function initSliders() {
 	// Список слайдерів
 	// Перевіряємо, чи є слайдер на сторінці
+
+	function updateSlideClasses(swiper) {
+		const slides = swiper.slides;
+		const activeIndex = swiper.activeIndex;
+		const slidesPerView = swiper.params.slidesPerView;
+		const visibleCount =
+			typeof slidesPerView === "number"
+				? slidesPerView
+				: swiper.currentBreakpoint
+				? swiper.params.breakpoints[swiper.currentBreakpoint].slidesPerView
+				: 1;
+
+		slides.forEach((slide, index) => {
+			// Знімаємо всі класи
+			slide.classList.remove("slide-active");
+			slide.classList.remove("slide-inactive");
+
+			// Активний перший у групі
+			if (index >= activeIndex && index < activeIndex + visibleCount) {
+				if (index === activeIndex) {
+					slide.classList.add("slide-active");
+				} else {
+					slide.classList.add("slide-inactive");
+				}
+			}
+		});
+	}	
+
 	if (document.querySelector(".swiper-banner")) {
 		// Вказуємо склас потрібного слайдера
 		// Створюємо слайдер
@@ -108,6 +136,7 @@ function initSliders() {
 			// observer: true,
 			// observeParents: true,
 			slidesPerView: 1,
+			slidesPerGroup: 1,
 			spaceBetween: 8,
 			//autoHeight: true,
 			speed: 800,
@@ -115,7 +144,7 @@ function initSliders() {
 			//touchRatio: 0,
 			//simulateTouch: false,
 			//loop: true,
-			// preloadImages: false,
+			preloadImages: false,
 			lazy: true,
 
 			/*
@@ -149,11 +178,18 @@ function initSliders() {
 				},
 				992: {
 					slidesPerView: "auto",
-				}
+				},
 			},
 
 			// Події
-			on: {},
+			on: {
+				slideChange: function () {
+					updateSlideClasses(this);
+				},
+				init: function () {
+					updateSlideClasses(this);
+				},
+			},
 		});
 	}
 }

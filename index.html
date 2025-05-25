@@ -9,6 +9,7 @@
 	</head>
 	<body>
 		<section class="wrapper">
+
 			<header class="header">
 				<section class="header__container">
 					<a href="./index.html" class="header__logo"><img width="117" loading="eager" fetchpriority="high" src="./src/images/logo.svg" alt="Логотип MoodDuck"></a>
@@ -76,7 +77,9 @@
 					</nav>
 				</section>
 			</header>
+
 			<main class="main">
+
 				<section class="main__bg">
 					<section class="main__bg-group main__bg-group_noises">
 						<picture class="main__bg-picture main__bg-picture-noise">
@@ -213,6 +216,7 @@
 						</picture>
 					</section>
 				</section>
+
 				<section class="main__hero hero">
 					<!-- <section class="main__bg">
 						<picture>
@@ -252,6 +256,7 @@
 						</section>
 					</section>
 				</section>
+
 				<section class="main__gallery-flavous gallery-flavours">
 					<section class="gallery-flavours__container">
 						<section class="heading">
@@ -930,6 +935,7 @@
 						</section>
 					</section>
 				</section>
+
 				<section class="main__gallery-merch gallery-merch">
 					<section class="gallery-merch__container">
 						<section class="heading">
@@ -1214,6 +1220,7 @@
 						</section>
 					</section>
 				</section>
+
 				<section class="main__about about">
 					<section class="about__container">
 						<section class="heading">
@@ -1267,6 +1274,7 @@
 						</section>
 					</section>
 				</section>
+
 				<section class="main__brand-info brand-info">
 					<section class="brand-info__container">
 						<section class="heading heading_center">
@@ -1320,6 +1328,7 @@
 						</section>
 					</section>
 				</section>
+
 				<section class="main__flavours-info flavours-info">
 					<section class="flavours-info__container">
 						<section class="heading heading_center">
@@ -1386,6 +1395,7 @@
 						</section>
 					</section>
 				</section>
+
 				<section class="main__price-policy price-policy">
 					<section class="price-policy__container">
 						<section class="heading heading_center">
@@ -1409,6 +1419,7 @@
 						</section>
 					</section>
 				</section>
+
 				<section class="main__resources-library resources-library">
 					<section class="resources-library__container">
 						<section class="heading heading_center">
@@ -1456,15 +1467,53 @@
 						</section>
 					</section>
 				</section>
+
 				<section class="main__reviews reviews">
 					<section class="reviews__container">
 						<section class="heading heading_center">
 							<img loading="lazy" class="price-policy__decorative-duck decorative-duck" width="100" height="155" src="./src/images/alternative/ducks/duck-watermelon-ice.svg" alt="Декоративна качка в кавуні">
-							
 							<h2 class="heading__title"><span class="heading__title_light -nowrap">Що кажуть</span> про <span class="-nowrap">mood duck</span></h2>
+						</section>
+						<section class="reviews__slider swiper swiper-card">
+							<section class="reviews__wrapper swiper-wrapper">
+
+								<section class="reviews__slide swiper-slide">
+									<article class="reviews__card card-review">
+										<section class="card-review__header">
+											<section class="card-review__user-info">
+												<section class="card-review__awatar"></section>
+												<h4 class="card-review__user-name"></h4>
+												<time class="card-review__datetime" datetime="" data-time></time>
+											</section>
+											<ul class="card-review__rating">
+												<li class="card-review__rating-item card-review__rating-item_active"><i class="icon-duck"></i></li>
+												<li class="card-review__rating-item"><i class="icon-duck"></i></li>
+												<li class="card-review__rating-item"><i class="icon-duck"></i></li>
+												<li class="card-review__rating-item"><i class="icon-duck"></i></li>
+												<li class="card-review__rating-item"><i class="icon-duck"></i></li>
+											</ul>
+										</section>
+										<section class="card-review__content"></section>
+										<section class="card-review__footer"></section>
+									</article>
+								</section>
+
+							</section>
+							<section class="reviews__conrtol swiper-conrtol">
+								<section class="reviews__slider-buttons swiper-buttons">
+									<button type="button" class="reviews__slider-button reviews__slider-button_prev swiper-button-prev">
+										<i class="icon-arrow"></i>
+									</button>
+									<button type="button" class="reviews__slider-button reviews__slider-button_next swiper-button-next">
+										<i class="icon-arrow"></i>
+									</button>
+								</section>
+								<section class="reviews__pagination swiper-pagination"></section>
+							</section>
 						</section>
 					</section>
 				</section>
+
 				<section class="main__contacts contacts">
 					<section class="contacts__container">
 						<section class="heading heading_center">
@@ -1472,10 +1521,13 @@
 						</section>
 					</section>
 				</section>
+
 			</main>
+
 			<footer class="footer">
 				<section class="footer__container"></section>
 			</footer>
+
 		</section>
 
 		<script type="module" src="./src/scripts/index.js"></script>

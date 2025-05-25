@@ -42,6 +42,13 @@
 	user-select: none;
 	overflow: hidden;
 	position: relative;
+	transition: opacity 0.3s;
+	opacity: 0.5;
+
+	&-active {
+		transition: opacity 0.3s;
+		opacity: 1;
+	}
 
 	&:active {
 		cursor: grab;
@@ -164,9 +171,9 @@
 }
 
 .swiper-card {
-	// .swiper-wrapper {
-	// 	max-width: $pc;
-	// }
+	.swiper-wrapper {
+		// max-width: $pc;
+	}
 
 	@media (max-width: $mobile) {
 		overflow: hidden;
