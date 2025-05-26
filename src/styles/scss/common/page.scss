@@ -216,7 +216,6 @@
 		@include adaptiveValue(margin-right, 30, 10, 0, $maxWidth, $p-tablet);
 		display: flex;
 		flex-direction: column;
-		// justify-content: space-between;
 		margin-bottom: toRem(64);
 
 		@media (max-width: $tablet) {
@@ -337,24 +336,20 @@
 		justify-content: center;
 		flex-wrap: wrap;
 		margin: 0 auto;
+		gap: toRem(8);
 	}
 
 	&__column {
 		flex: 1 1 toRem(286);
-		// max-width: toRem(286);
 		min-height: toRem(772);
 		display: flex;
 		flex-wrap: wrap;
-		// flex-direction: column;
+		gap: toRem(8);
 		justify-content: space-between;
 
 		@media (max-width: $tablet) {
 			min-height: auto;
 		}
-
-		// &:not(:last-child) {
-		// 	margin-right: toRem(8);
-		// }
 
 		& > * {
 			flex: 1 1 toRem(382);
@@ -391,12 +386,6 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-
-		margin-right: toRem(8);
-		margin-bottom: toRem(8);
-
-		// &:not(:last-child) {
-		// }
 	}
 
 	&__item-title {
@@ -439,6 +428,7 @@
 	&__wrap {
 		width: 100%;
 		display: flex;
+		gap: toRem(8);
 
 		@media (max-width: $tablet) {
 			flex-wrap: wrap;
@@ -449,15 +439,10 @@
 		border-radius: toRem(20);
 		background: $mainColorLight;
 		flex: 1 1 auto;
-		margin-bottom: toRem(8);
 		padding: toRem(10);
 
 		display: flex;
 		flex-direction: column;
-
-		&:not(:last-child) {
-			margin-right: toRem(8);
-		}
 	}
 
 	&__picture {
@@ -525,6 +510,7 @@
 		justify-content: center;
 		position: relative;
 		flex-wrap: wrap;
+		gap: toRem(8);
 
 		@media (max-width: $tablet) {
 		}
@@ -549,10 +535,10 @@
 		text-align: center;
 		padding: toRem(35) 0;
 
-		&:not(:last-child) {
-			margin-bottom: toRem(8);
-			margin-right: toRem(8);
-		}
+		// &:not(:last-child) {
+		// 	margin-bottom: toRem(8);
+		// 	margin-right: toRem(8);
+		// }
 
 		@media (max-width: $tablet) {
 			margin-right: 0;
@@ -623,8 +609,6 @@
 	}
 
 	&__description {
-		// flex: 1 1 50%;
-		// order: 1;
 	}
 
 	&__paragraph {
@@ -634,10 +618,6 @@
 		&:not(:last-child) {
 			margin-bottom: toRem(24);
 		}
-
-		// @media (max-width:$mobile){
-		// 	order: 1;
-		// }
 	}
 
 	&__footer {
@@ -675,6 +655,14 @@
 
 .reviews {
 	&__container {
+	}
+
+	&__decorative-duck {
+		@include adaptiveValue(width, 126, 72);
+		top: 50%;
+		right: 0;
+		translate: -13% -55%;
+		z-index: 5;
 	}
 
 	&__slider {
@@ -717,6 +705,10 @@
 	&__button {
 		margin: 0 auto;
 		@include adaptiveValue(margin-top, 30, 50);
+
+		@media (max-width: $mobile) {
+			width: toRem(316);
+		}
 	}
 }
 
@@ -738,7 +730,7 @@
 		justify-content: space-between;
 		flex-wrap: wrap;
 
-		@media (max-width:$mobile){
+		@media (max-width: $mobile) {
 			flex-direction: column;
 			align-items: center;
 		}
@@ -777,8 +769,9 @@
 		display: flex;
 		align-items: center;
 		justify-content: end;
+		row-gap: toRem(2);
 
-		@media (max-width:$mobile){
+		@media (max-width: $mobile) {
 			margin-top: toRem(24);
 		}
 	}
@@ -786,10 +779,6 @@
 	&__rating-item {
 		@include adaptiveValue(font-size, 25, 22);
 		color: rgba(147, 147, 147, 1);
-
-		&:not(:last-child) {
-			margin-right: toRem(2);
-		}
 
 		&_active {
 			color: $accentColor;
@@ -815,7 +804,7 @@
 		display: flex;
 		justify-content: space-between;
 
-		@media (max-width:$mobile){
+		@media (max-width: $mobile) {
 			flex-direction: column;
 			align-items: center;
 			justify-content: start;
@@ -826,7 +815,7 @@
 	&__pluses {
 		margin-right: toRem(20);
 
-		@media (max-width:$mobile){
+		@media (max-width: $mobile) {
 			margin-right: 0;
 			margin-bottom: toRem(24);
 		}
@@ -862,5 +851,146 @@
 
 .contacts {
 	&__container {
+	}
+
+	&__conent {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		column-gap: toRem(50);
+		row-gap: toRem(24);
+	}
+
+	&__section {
+		flex: 1 1 toRem(225);
+
+		&_right {
+			text-align: right;
+		}
+
+		@media (max-width:$mobile){
+			flex: 1 1 100%;
+		}
+	}
+
+	&__title {
+		font-family: $headingFont;
+		text-transform: uppercase;
+
+		[class$="_right"] & {
+			text-align: right;
+
+			@media (max-width: $mobile) {
+				text-align: center;
+			}
+		}
+
+		@media (max-width: $mobile) {
+			text-align: center;
+		}
+
+		@include adaptiveValue("font-size", 60, 26);
+		@include adaptiveValue(margin-bottom, 24, 20);
+	}
+
+	&__list {
+	}
+
+	&__link {
+		display: flex;
+		align-items: center;
+
+		[class$="_right"] & {
+			flex-direction: row-reverse;
+
+			@media (max-width: $mobile) {
+				flex-direction: row;
+			}
+		}
+
+		@media (max-width: $mobile) {
+			justify-content: center;
+		}
+
+		@include adaptiveValue("font-size", 20, 18);
+
+		[class*="icon-"] {
+			@include adaptiveValue("font-size", 45, 30);
+
+			@include adaptiveValue(margin-right, 10, 6);
+
+			[class$="_right"] & {
+				margin-right: 0;
+				@include adaptiveValue(margin-left, 10, 6);
+
+				@media (max-width: $mobile) {
+					margin-left: 0;
+					@include adaptiveValue(margin-right, 10, 6);
+				}
+			}
+		}
+	}
+
+	&__item {
+		&:not(:last-child) {
+			@include adaptiveValue(margin-bottom, 20, 16);
+		}
+	}
+
+	&__picture-wrap {
+		flex: 1 1 toRem(360);
+		display: flex;
+		justify-content: center;
+
+		@media (max-width:$tablet){
+			flex: 1 1 100%;
+			order: -1;
+		}
+	}
+
+	&__picture {
+		@include adaptiveValue(min-width, 360, 316);
+		@include adaptiveValue(min-height, 320, 283);
+		border-radius: toRem(20);
+		background-color: $accentColor;
+		position: relative;
+
+		box-shadow: 0 0 toRem(12) $accentColor;
+
+		@media (max-width: $tablet) {
+			margin-bottom: toRem(6);
+		}
+
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+
+		&::before {
+			@include adaptiveValue(width, 208, 183);
+			@include adaptiveValue(height, 156, 138);
+			left: toRem(5);
+			top: toRem(5);
+			opacity: 0.6;
+
+			// .webp & {
+			background-image: url(../../images/logo.svg);
+			// }
+		}
+
+		&::after {
+			width: 50%;
+			height: calc(100% - toRem(40));
+			right: toRem(5);
+			top: toRem(20);
+
+			// .webp & {
+			background-image: url(../../images/alternative/ducks/duck-boss.svg);
+			// }
+		}
 	}
 }

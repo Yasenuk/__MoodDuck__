@@ -49,6 +49,7 @@
 	justify-content: space-between;
 	color: $mainColorLight;
 	@include adaptiveValue(margin-bottom, 100, 20);
+	position: relative;
 
 	&_center {
 		text-align: center;
