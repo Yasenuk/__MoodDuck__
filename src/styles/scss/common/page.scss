@@ -40,6 +40,7 @@
 	}
 
 	&__bg-picture-noise {
+		height: 100vh;
 		// opacity: 0.6;
 	}
 
@@ -581,34 +582,32 @@
 	}
 
 	&__wrap {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
+		display: grid;
+		grid-template-columns: 50% 50%;
+		grid-template-rows: auto;
+		gap: toRem(24);
+
+		grid-template-areas:
+			"description cube"
+			"footer cube";
+
 		position: relative;
-
-		@media (max-width: $tablet) {
-			flex-direction: column;
-			justify-content: start;
-			align-items: center;
-		}
-	}
-
-	&__content {
-		flex: 1 1 50%;
 		font-weight: 500;
-		padding-top: toRem(60);
-		padding-bottom: toRem(60);
-		@include adaptiveValue(padding-left, 44, 0);
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
 
 		@media (max-width: $tablet) {
-			padding-left: 0;
+			grid-template-columns: 100%;
+			grid-template-rows: auto auto;
+			grid-template-areas:
+				"description"
+				"cube"
+				"footer";
+			row-gap: toRem(30);
 		}
 	}
 
 	&__description {
+		grid-area: description;
+		align-self: center;
 	}
 
 	&__paragraph {
@@ -621,29 +620,41 @@
 	}
 
 	&__footer {
+		grid-area: footer;
 		display: flex;
 		align-items: center;
+		justify-content: center;
+		row-gap: toRem(30);
+		column-gap: toRem(26);
+
+		@media (max-width: $tablet) {
+			flex-wrap: wrap-reverse;
+		}
 	}
 
 	&__button {
-		margin-right: toRem(26);
+		flex: 1 1 auto;
+		font-size: toRem(18);
+
+		@media (max-width: $mobile) {
+			margin: 0;
+		}
 	}
 
 	&__button-description {
-		max-width: toRem(195);
+		max-width: toRem(194);
 		font-size: toRem(16);
+
+		@media (max-width: $tablet) {
+			text-align: center;
+		}
 	}
 
 	&__cube {
-		flex: 1 1 50%;
-		display: flex;
-		justify-content: center;
+		grid-area: cube;
+		align-self: center;
 		position: relative;
-
-		@media (max-width: $tablet) {
-			@include adaptiveValue(margin-bottom, 44, 30);
-			order: 1;
-		}
+		padding-block: toRem(30);
 	}
 
 	&__picture-set {
@@ -657,12 +668,31 @@
 	&__container {
 	}
 
+	&__heading {
+		@media (max-width: $pc) {
+			max-width: toRem(750);
+			margin-inline: auto;
+		}
+	}
+
 	&__decorative-duck {
+		display: block;
 		@include adaptiveValue(width, 126, 72);
+		@include adaptiveValue(height, 140, 80);
 		top: 50%;
 		right: 0;
 		translate: -13% -55%;
 		z-index: 5;
+
+		@media (max-width: $pc) {
+			right: 50%;
+			top: 100%;
+			translate: 50% -60%;
+		}
+
+		@media (max-width: $tablet) {
+			translate: 50% -95%;
+		}
 	}
 
 	&__slider {
@@ -868,7 +898,7 @@
 			text-align: right;
 		}
 
-		@media (max-width:$mobile){
+		@media (max-width: $mobile) {
 			flex: 1 1 100%;
 		}
 	}
@@ -942,7 +972,7 @@
 		display: flex;
 		justify-content: center;
 
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			flex: 1 1 100%;
 			order: -1;
 		}

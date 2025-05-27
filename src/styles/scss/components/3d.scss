@@ -1,5 +1,4 @@
 .wrapper-3d {
-	aspect-ratio: 1 / 1;
 	@include adaptiveValue(min-height, 556, 324);
 	perspective: 10000px;
 	display: flex;

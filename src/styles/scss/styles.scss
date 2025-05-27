@@ -62,6 +62,10 @@ $mobileSmall: toEm($p-mobileSmall); // Телефони S
 @import "base/null";
 
 body {
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
 	&._locked {
 		overflow: hidden;
 		touch-action: none;
@@ -116,7 +120,7 @@ body {
 		max-width: none;
 
 		@if ($containerPadding > 0 and $maxWidthContainer > 0) {
-			padding-inline: toRem(math.div($containerPadding, 2));
+			padding-inline: toRem(8);
 		}
 	}
 }

@@ -117,7 +117,7 @@ function initSliders() {
 			//simulateTouch: false,
 			// loop: true,
 
-			// loop: true,
+			loop: true,
 			loopedSlides: 21,
 
 			preloadImages: false,
@@ -173,7 +173,6 @@ function initSliders() {
 			// loop: true,
 
 			// loop: true,
-			loopedSlides: 21,
 
 			preloadImages: false,
 			lazy: {
