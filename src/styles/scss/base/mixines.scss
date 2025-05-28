@@ -112,7 +112,7 @@
 
 	// Рахуємо коефіцієнт для clamp
 	$diff: $max - $min;
-	$slope: ($diff / ($widthFrom - $widthTo)) * 100vw;
+	$slope: math.div($diff, ($widthFrom - $widthTo)) * 100vw;
 
 	$value: clamp(#{$minRem}, #{toRem($min)} + #{$slope}, #{$maxRem});
 

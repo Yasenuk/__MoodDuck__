@@ -12,6 +12,12 @@
 	}
 
 	&__logo {
+		text-align: center;
+		margin-bottom: toRem(30);
+	}
+
+	&__logo-image {
+		max-width: 100%;
 	}
 
 	&__conent-wrap {
@@ -30,7 +36,7 @@
 			@include adaptiveValue(margin-bottom, 70, 8);
 		}
 
-		@media (max-width:$mobile){
+		@media (max-width: $mobile) {
 			flex-direction: column;
 			align-items: center;
 			text-align: center;
@@ -38,7 +44,6 @@
 	}
 
 	&__item {
-		
 	}
 
 	&__link {
@@ -46,8 +51,8 @@
 
 		transition: color 0.3s;
 
-		@media (any-hover: hover){
-			&:hover{
+		@media (any-hover: hover) {
+			&:hover {
 				transition: color 0.3s;
 				color: $mainColorLight;
 			}
@@ -74,12 +79,17 @@
 
 	&__decarative {
 		position: absolute;
-		bottom: 0;
+		bottom: toRem(45);
 		left: 50%;
 		translate: -50% 0;
 
-		@media (max-width:$mobile){
+		@media (max-width: $mobile) {
 			position: relative;
+			text-align: center;
+			translate: 0 0;
+			left: 0;
+			bottom: 0;
+			margin-top: toRem(24);
 		}
 	}
 }

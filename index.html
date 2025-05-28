@@ -18,25 +18,25 @@
 						<section class="menu__body">
 							<ul class="menu__list menu__list_links">
 								<li class="menu__item menu__item_links">
-									<a href="" class="menu__link">Головна</a>
+									<a href="./index.html" class="menu__link">Головна</a>
 								</li>
 								<li class="menu__item menu__item_links">
-									<a href="" class="menu__link">Галерея смаків</a>
+									<a href="#gallery-flavours" class="menu__link">Галерея смаків</a>
 								</li>
 								<li class="menu__item menu__item_links">
-									<a href="" class="menu__link">Галерея мерчу</a>
+									<a href="#gallery-merch" class="menu__link">Галерея мерчу</a>
 								</li>
 								<li class="menu__item menu__item_links">
-									<a href="" class="menu__link">Про нас</a>
+									<a href="#about" class="menu__link">Про нас</a>
 								</li>
 								<li class="menu__item menu__item_links">
-									<a href="" class="menu__link">Бібліотека матеріалів</a>
+									<a href="#resources-library" class="menu__link">Бібліотека матеріалів</a>
 								</li>
 								<li class="menu__item menu__item_links">
-									<a href="" class="menu__link">Відгуки</a>
+									<a href="#reviews" class="menu__link">Відгуки</a>
 								</li>
 								<li class="menu__item menu__item_links">
-									<a href="" class="menu__link">Контакти</a>
+									<a href="#contacts" class="menu__link">Контакти</a>
 								</li>
 							</ul>
 							<section class="menu__section" data-vis>
@@ -217,7 +217,7 @@
 					</section>
 				</section>
 
-				<section class="main__hero hero">
+				<section class="main__hero hero" id="hero">
 					<!-- <section class="main__bg">
 						<picture>
 							<source srcset="./src/images/alternative/noise.webp" type="image/webp">
@@ -257,7 +257,7 @@
 					</section>
 				</section>
 
-				<section class="main__gallery-flavous gallery-flavours">
+				<section class="main__gallery-flavous gallery-flavours" id="gallery-flavours">
 					<section class="gallery-flavours__container">
 						<section class="heading">
 							<h2 class="heading__title">Галерея <span class="heading__title_light">смаків</span></h2>
@@ -936,7 +936,7 @@
 					</section>
 				</section>
 
-				<section class="main__gallery-merch gallery-merch">
+				<section class="main__gallery-merch gallery-merch" id="gallery-merch">
 					<section class="gallery-merch__container">
 						<section class="heading">
 							<h2 class="heading__title">Галерея <span class="heading__title_light">мерчу</span></h2>
@@ -1221,7 +1221,7 @@
 					</section>
 				</section>
 
-				<section class="main__about about">
+				<section class="main__about about" id="about">
 					<section class="about__container">
 						<section class="heading">
 							<h2 class="heading__title">Про <span class="heading__title_light">нас</span></h2>
@@ -1247,8 +1247,13 @@
 								<p class="about__paragraph">Підписуйся на нас в соцмережах - далі буде ще гарячіше.</p>
 							</section>
 							<section class="about__banners">
-								<img loading="lazy" class="about__decorative-duck decorative-duck" width="100" height="155" src="./src/images/alternative/ducks/mafia-duck.svg" alt="Декоративна качка мафіозі">
-							
+								<div class="about__decorative-duck decorative-duck">
+									<picture>
+										<source srcset="./src/images/alternative/ducks/mafia-duck.webp" type="image/webp">
+										<img loading="lazy" src="./src/images/alternative/ducks/mafia-duck.png" alt="екоративна качка мафіозі">
+									</picture>
+								</div>
+
 								<section class="about__slider swiper swiper-banner">
 									<section class="about__wrapper swiper-wrapper">
 										<section class="about__slide swiper-slide">
@@ -1275,7 +1280,7 @@
 					</section>
 				</section>
 
-				<section class="main__brand-info brand-info">
+				<section class="main__brand-info brand-info" id=" brand-info">
 					<section class="brand-info__container">
 						<section class="heading heading_center">
 							<h2 class="heading__title">Чому обирають <span class="heading__title_light"><span class="-nowrap">mood duck</span></span></h2>
@@ -1329,7 +1334,7 @@
 					</section>
 				</section>
 
-				<section class="main__flavours-info flavours-info">
+				<section class="main__flavours-info flavours-info" id="flavours-info">
 					<section class="flavours-info__container">
 						<section class="heading heading_center">
 							<h2 class="heading__title"><span class="heading__title_light">Доступні смаки</span> <span class="-nowrap">mood duck</span></h2>
@@ -1396,15 +1401,20 @@
 					</section>
 				</section>
 
-				<section class="main__price-policy price-policy">
+				<section class="main__price-policy price-policy" id="price-policy">
 					<section class="price-policy__container">
 						<section class="heading heading_center">
 							<h2 class="heading__title"><span class="heading__title_light">Цінова політика</span> <span class="-nowrap">mood duck</span></h2>
 						</section>
 
 						<section class="price-policy__cards">
-							<img loading="lazy" class="price-policy__decorative-duck decorative-duck" width="100" height="155" src="./src/images/alternative/ducks/duck-write.svg" alt="Декоративна качка з блокнотом">
-							
+							<div class="price-policy__decorative-duck decorative-duck">
+								<picture>
+									<source srcset="./src/images/alternative/ducks//duck-write.webp" type="image/webp">
+									<img loading="lazy" src="./src/images/alternative/ducks/duck-write.png" alt="Декоративна качка з блокнотом">
+								</picture>
+							</div>
+
 							<section class="price-policy__card">
 								<h4 class="price-policy__card-title">10 мл</h4>
 								<p class="price-policy__card-price">МРЦ - 150</p>
@@ -1420,7 +1430,7 @@
 					</section>
 				</section>
 
-				<section class="main__resources-library resources-library">
+				<section class="main__resources-library resources-library" id="resources-library">
 					<section class="resources-library__container">
 						<section class="heading heading_center">
 							<h2 class="heading__title"><span class="heading__title_light">Бібліотека</span> матеріалів</h2>
@@ -1466,11 +1476,16 @@
 					</section>
 				</section>
 
-				<section class="main__reviews reviews">
+				<section class="main__reviews reviews" id="reviews">
 					<section class="reviews__container">
 						<section class="reviews__heading heading heading_center">
 							<h2 class="heading__title"><span class="heading__title_light -nowrap">Що кажуть</span> про <span class="-nowrap">mood duck</span></h2>
-							<img loading="lazy" class="reviews__decorative-duck decorative-duck" width="100" src="./src/images/alternative/ducks/duck-watermelon-ice.svg" alt="Декоративна качка в кавуні">
+							<div class="reviews__decorative-duck decorative-duck">
+								<picture>
+									<source srcset="./src/images/alternative/ducks/duck-watermelon-ice.webp" type="image/webp">
+									<img loading="lazy" src="./src/images/alternative/ducks/duck-watermelon-ice.png" alt="Качка в кавуні">
+								</picture>
+							</div>
 						</section>
 						<section class="reviews__slider swiper swiper-review">
 							<section class="reviews__wrapper swiper-wrapper">
@@ -1599,11 +1614,11 @@
 								<section class="reviews__pagination swiper-pagination"></section>
 							</section>
 						</section>
-						<button class="reviews__button button">Залишити відгук <i class="icon-write"></i></button>
+						<button class="reviews__button button open-popup" data-popup-open="#popup-review">Залишити відгук <i class="icon-write"></i></button>
 					</section>
 				</section>
 
-				<section class="main__contacts contacts">
+				<section class="main__contacts contacts" id="contacts">
 					<section class="contacts__container">
 						<section class="heading heading_center">
 							<h2 class="heading__title"><span class="heading__title_light">Звʼяжіться</span> <span class="-nowrap">з нами</span></h2>
@@ -1655,7 +1670,9 @@
 
 			<footer class="footer">
 				<section class="footer__container">
-					<section class="footer__logo"></section>
+					<section class="footer__logo">
+						<img width="1323" height="auto" src="./src/images/footer-logo.svg" alt="Логотип MoodDuck в підвалі сайту" class="footer__logo-image">
+					</section>
 
 					<section class="footer__conent-wrap">
 						<section class="footer__conent">
@@ -1691,10 +1708,68 @@
 					</section>
 					
 					<section class="footer__decarative">
-						<img src="./src/images/alternative/ducks/duck-in-cloud.svg" alt="Качка на хмарі">
+						<picture>
+							<source srcset="./src/images/alternative/ducks/duck-in-cloud.webp" type="image/webp">
+							<img src="./src/images/alternative/ducks/duck-in-cloud.png" alt="Качка на хмарі">
+						</picture>
 					</section>
 				</section>
 			</footer>
+
+			<section class="popup" id="popup-review" data-popup>
+				<section class="popup__wrapper">
+					<section class="popup__body">
+						<header class="popup__header">
+							<h2 class="popup__title">Залиште свій відгук про <span class="-nowrap">mood duck</span></h2>
+							<button data-popup-close type="button" class="popup__close"><i class="icon-cross"></i></button>
+						</header>
+						<section class="popup__content">
+							<form class="popup__form form-review" id="form-review" action="./index.html">
+								<fieldset class="form-review__fieldset">
+									<legend class="form-review__label">Оцініть продукт</legend>
+									<section class="form-review__rating">
+										<input type="radio" id="rating-5" name="rating" value="5">
+										<label for="rating-5" title="5 з 5"><i class="icon-duck"></i></label>
+
+										<input type="radio" id="rating-4" name="rating" value="4">
+										<label for="rating-4" title="4 з 5"><i class="icon-duck"></i></label>
+
+										<input type="radio" id="rating-3" name="rating" value="3">
+										<label for="rating-3" title="3 з 5"><i class="icon-duck"></i></label>
+
+										<input type="radio" id="rating-2" name="rating" value="2">
+										<label for="rating-2" title="2 з 5"><i class="icon-duck"></i></label>
+
+										<input type="radio" id="rating-1" name="rating" value="1">
+										<label for="rating-1" title="1 з 5"><i class="icon-duck"></i></label>
+									</section>
+								</fieldset>
+								
+								<label class="form-review__label" for="user-name">Прізвище та Ім’я</label>
+								<input type="text" name="user-name" id="user-name" class="form-review__input" required>
+								
+								<label class="form-review__label" for="user-phone">Номер телефону</label>
+								<input type="tel" id="user-phone" name="user-phone" class="form-review__input" required pattern="[0-9]{3}[0-9]{3}[0-9]{4}">
+
+								<label class="form-review__label" for="user-message">Коментар</label>
+								<textarea name="user-message" id="user-message" class="form-review__input form-review__textarea"></textarea>
+
+								<section class="form-review__row">
+									<div class="form-review__column">
+										<label class="form-review__label" for="pluses">Плюси</label>
+										<input type="text" name="pluses" id="pluses" class="form-review__input">
+									</div>
+									<div class="form-review__column">
+										<label class="form-review__label" for="minuses">Мінуси</label>
+										<input type="text" name="minuses" id="minuses" class="form-review__input">
+									</div>
+								</section>
+								<button type="submit" class="form-review__button button" id="send-review">Залишити відгук <i class="icon-write"></i></button>
+							</form>
+						</section>
+					</section>
+				</section>
+			</section>
 
 		</section>
 

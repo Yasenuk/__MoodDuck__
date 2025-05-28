@@ -2,7 +2,7 @@ import * as functions from "./functions/functions.js";
 import { _Module } from './module.js'
 
 /** Для коректного відображення webp із css */
-// functions.isWebp();
+functions.isWebp();
 
 /* Додавання loaded для HTML після повного завантаження сторінки */
 functions.isPageLoad();
@@ -14,10 +14,10 @@ functions.isPageLoad();
 _Module.burger_menu.init();
 
 /* Модуль для роботи з спостерігачем */
-// _Module.watcher.init();
+_Module.watcher.init();
 
 /* Модуль для роботи з попапами */
-// _Module.popup.init();
+_Module.popup.init();
 
 /* Форматування чисел */
 // import wNumbMin from "./functions/wNumb.min.js";

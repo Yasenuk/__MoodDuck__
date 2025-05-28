@@ -1,9 +1,9 @@
 .popup {
 	position: fixed;
 	inset: 0;
-	padding: toRem(30) toRem(10);
+	padding: toRem(5) toRem(10);
 	pointer-events: none;
-	transition: transform 0.3s, scale 0.3s ease 0s;
+	transition: transform 0.3s ease 0.15s, scale 0.3s ease 0.5s;
 	transform: translateY(200%);
 	scale: 0;
 	z-index: 150;
@@ -11,9 +11,10 @@
 	&._open {
 		overflow: auto;
 		pointer-events: auto;
-		transition: transform 0.3s, scale 0.3s ease 0s;
+		transition: transform 0.3s 0.05s, scale 0.3s ease 0.15s;
 		transform: translateY(0);
 		scale: 1;
+		background-color: #0000005a;
 	}
 
 	&__wrapper {
@@ -27,23 +28,135 @@
 	}
 
 	&__body {
-		background-color: #fafafa;
+		background-color: $mainColor;
+		border-radius: toRem(20);
 		width: 100%;
 		max-width: toRem(900);
+
+		@include adaptiveValue(padding-block, 30, 20);
+		@include adaptiveValue(padding-inline, 30, 10);
+
+		box-shadow: 0 0 toRem(12) $accentColor;
 	}
 
 	&__header {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: center;
+		position: relative;
+	}
+
+	&__title {
+		text-align: center;
+		max-width: toRem(308);
+		font-weight: 600;
+		@include adaptiveValue("font-size", 20, 18);
+		line-height: toRem(18);
+
+		span {
+			text-transform: uppercase;
+		}
 	}
 
 	&__close {
+		display: none;
+
+		@media (max-width: $mobile) {
+			display: block;
+			font-size: toRem(40);
+			position: absolute;
+			top: toRem(8);
+			right: toRem(8);
+		}
 	}
 
 	&__content {
 	}
 
+	&__form {
+		@include adaptiveValue(margin-top, 20, 12);
+	}
+
 	&__footer {
+	}
+}
+
+.form-review {
+	&__label {
+		font-size: toRem(14);
+		font-weight: 500;
+		margin-top: toRem(12);
+		margin-bottom: toRem(8);
+		color: rgba(236, 236, 236, 1);
+		width: 100%;
+
+		@media (max-width: $mobile) {
+			text-align: center;
+		}
+	}
+
+	&__rating {
+		display: flex;
+		align-items: center;
+		justify-content: start;
+		flex-direction: row-reverse;
+
+		column-gap: toRem(4);
+		margin-bottom: toRem(6);
+
+		font-size: toRem(25);
+
+		input {
+			display: none;
+		}
+
+		label {
+			cursor: pointer;
+			transition: transform 0.2s ease 0.1s, color 0.2s ease 0.1s;
+			color: $mainColorLight;
+
+			&:hover, &:hover ~ label {
+				color: $accentColor;
+				transform: scale(1.1);
+			}
+		}
+		
+		input:checked label, input:checked ~ label {
+			color: $accentColor;
+		}
+		
+		@media (max-width: $mobile) {
+			justify-content: center;
+		}
+	}
+
+	&__input {
+		background-color: $mainColorLight;
+		border-radius: toRem(2);
+		color: $mainColor;
+		@include adaptiveValue(padding-block, 14, 13);
+		@include adaptiveValue(padding-inline, 8, 5);
+		font-weight: 500;
+
+		&:focus {
+			outline: toRem(2) solid $accentColor;
+		}
+	}
+
+	&__textarea {
+		resize: none;
+		@include adaptiveValue(min-height, 180, 260);
+	}
+
+	&__row {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(toRem(342), 1fr));
+		grid-template-rows: auto;
+		column-gap: toRem(10);
+	}
+
+	&__button {
+		width: 100%;
+		margin-top: toRem(20);
 	}
 }

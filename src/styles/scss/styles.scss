@@ -61,9 +61,15 @@ $mobileSmall: toEm($p-mobileSmall); // Телефони S
 
 @import "base/null";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-	&::-webkit-scrollbar {
-		display: none;
+	@media (max-width: $mobile) {
+		&::-webkit-scrollbar {
+			display: none;
+		}
 	}
 
 	&._locked {
@@ -82,6 +88,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
+
 	@supports (overflow: clip) {
 		overflow: clip;
 	}
